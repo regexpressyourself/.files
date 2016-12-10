@@ -1,0 +1,2 @@
+#!/bin/sh
+feh  --image-bg black --bg-center '/home/zookeeprr/pictures/wallpapers/gpd.jpg' 

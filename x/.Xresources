@@ -1,0 +1,74 @@
+
+URxvt*font: xft:Inconsolata:Regular:pixelsize=17
+URxvt*foreground: #eff0eb
+URxvt*background: #282a36
+URxvt*cursorColor: #97979b
+URxvt.letterSpace: -1
+
+! Black + DarkGrey
+URxvt*color0: #282a36
+URxvt*color8: #686868
+
+! DarkRed + Red
+URxvt*color1: #ff5c57
+URxvt*color9: #ff5c57
+
+! DarkGreen + Green
+URxvt*color2: #5af78e
+URxvt*color10:#5af78e
+
+! DarkYellow + Yellow
+URxvt*color3: #f3f99d
+URxvt*color11:#f3f99d
+
+! DarkBlue + Blue
+URxvt*color4: #57c7ff
+URxvt*color12:#57c7ff
+
+! DarkMagenta + Magenta
+URxvt*color5: #ff6ac1
+URxvt*color13:#ff6ac1
+
+! DarkCyan + Cyan (both not tango)
+URxvt*color6: #9aedfe
+URxvt*color14:#9aedfe
+
+! LightGrey + White
+URxvt*color7: #eff0eb
+URxvt*color15:#f1f1f0
+
+
+
+
+Xcursor.theme: numix
+
+!!Configure urxvt terminal
+URtxvt.termName:         rxvt-unicode
+!URxvt.bitdepth:         32
+URxvt.saveLines:        5120
+URxvt.multichar_encoding: utf-8
+URxvt.mapAlert:         true
+URxvt.visualBell:       true
+URxvt.urlLauncher:      firefox
+URxvt.matcher.button:   1
+!URxvt.transparent:      true
+URxvt.perl-ext-common:  default,matcher,-option-popup,-selection-popup,-readline
+URxvt.xftAntialias:     true
+URxvt.scrollBar: false
+!urxvt.letterSpace: -1
+
+
+
+rofi.terminal:  urxvt
+rofi.lines:   10
+rofi.eh:    2
+rofi.width:   100
+rofi.padding: 200
+rofi.opacity: 95
+rofi.bw:    0
+rofi.bc:    #032c36
+rofi.bg:    #032c36
+rofi.fg:    #065f73
+rofi.hlbg:    #032c36
+rofi.hlfg:    #a2d9b1
+rofi.font: Inconsolata 10
