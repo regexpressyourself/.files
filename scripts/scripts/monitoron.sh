@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # setting up new mode for my VGA
