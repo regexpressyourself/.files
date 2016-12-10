@@ -1,0 +1,11 @@
+* Tmux Terminal Multiplexer
+  #+BEGIN_EXAMPLE
+tmux
+└── .tmux.conf
+  #+END_EXAMPLE
+
+** Setting Up
+
+  First, stow the directory as usual.
+
+  Just a tmux config file. I use tmux a lot when I don't have access to i3. I try to bind everything to work with vim-like keys.

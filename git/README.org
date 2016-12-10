@@ -1,0 +1,13 @@
+* Git Config
+  #+BEGIN_EXAMPLE
+git
+├── .gitconfig
+└── README.org
+  #+END_EXAMPLE
+
+
+  First, stow the directory as usual.
+
+  Just one file here, the .gitconfig. It has some aliases for git that I like. You will have to change the username, email, etc.
+
+  I can also recommend [[https://github.com/jonas/tig][tig]] if you're looking for a good git terminal interface that has more visual elements.

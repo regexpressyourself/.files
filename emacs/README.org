@@ -1,0 +1,24 @@
+* Emacs Config
+  #+BEGIN_EXAMPLE
+emacs
+├── README.org
+├── scripts
+│   └── ox-reveal.el
+└── .spacemacs
+  #+END_EXAMPLE
+
+
+  First, stow the directory as usual.
+
+** Spacemacs
+
+   I use [[http://spacemacs.org/][Spacemacs]] (and it's amazing). 
+
+   To install it, run:
+   #+BEGIN_EXAMPLE
+    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+   #+END_EXAMPLE
+
+   The .spacemacs file will be parsed when you next run emacs
+
+

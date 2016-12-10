@@ -1,0 +1,49 @@
+* Vim and Neovim Configs
+  #+BEGIN_EXAMPLE
+vim
+├── .config
+│   └── nvim
+│       ├── colors
+│       │   ├── coffee.vim
+│       │   ├── desert256.vim
+│       │   ├── gruvbox.vim
+│       │   ├── inkpot.vim
+│       │   ├── jellybeans.vim
+│       │   ├── molokai.vim
+│       │   ├── solarized.vim
+│       │   └── zenburn.vim
+│       └── init.vim
+├── README.org
+├── .vim
+│   └── colors
+│       ├── coffee.vim
+│       ├── desert256.vim
+│       ├── gruvbox.vim
+│       ├── inkpot.vim
+│       ├── jellybeans.vim
+│       ├── molokai.vim
+│       ├── solarized.vim
+│       └── zenburn.vim
+└── .vimrc
+
+  #+END_EXAMPLE
+
+** Setting Up
+
+   First, stow the directory as usual.
+
+** Vim
+
+   My vim setup is meant to be relatively minimalist. I use neovim mostly, but if it fails it's nice to have a coherent fallback. 
+
+   See vimrc for specifics.
+
+** Neovim
+
+   Still not really using Neovim to its full potential, but I really like it so far. vim-plug is amazing as well. 
+
+   See init.vim for specifics.
+
+** Colors 
+
+   I've included a few of my favorite color schemes just so I don't have to go find them every time I set this up.

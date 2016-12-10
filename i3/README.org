@@ -1,0 +1,18 @@
+* i3 Window Manager & Conky Configs
+  #+BEGIN_EXAMPLE
+i3
+├── .conkyrc
+├── .i3
+│   ├── config
+│   └── conky-i3bar
+├── README.org
+└── scripts
+    └── player.sh
+
+  #+END_EXAMPLE
+
+** Setting Up
+
+   First, stow the directory as usual.
+
+   I use i3 Window Manager with conky running in the i3-bar. I also include a script here that displays Spotify's now-playing information in the task bar. 

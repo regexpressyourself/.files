@@ -1,0 +1,23 @@
+* X Configs
+  #+BEGIN_EXAMPLE
+x
+├── .fehbg
+├── .xbindkeysrc
+├── .xinitrc
+├── .Xmodmap
+└── .Xresources
+  #+END_EXAMPLE
+
+** Setting Up
+
+   First, stow the directory as usual. You will want to back up your existing versions of these files.
+
+** Files
+
+   | File         | Purpose                                                                                        |
+   |--------------+------------------------------------------------------------------------------------------------|
+   | .fehbg       | Sets my background picture, using [[https://feh.finalrewind.org/][feh]]                                                          |
+   | .xbindkeysrc | Binds some hardware keys for me.                                                               |
+   | .xinitrc     | Init script. Sets background pic, starts programs, etc.                                        |
+   | .Xmodmap     | Binds keys for me. I use a few non-default values for hardware switches and caps lock override |
+   | .Xresources  | Terminal color scheme, fonts, etc.                                                             |

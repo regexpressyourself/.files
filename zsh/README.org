@@ -1,0 +1,40 @@
+* Zsh and oh-my-zsh Config
+  #+BEGIN_EXAMPLE
+zsh
+├── .dir_colors
+├── .oh-my-zsh
+│   ├── custom
+│   │   └── zsh_aliases.zsh
+│   └── themes
+│       └── sams-pure.zsh-theme
+├── README.org
+└── .zshrc
+  #+END_EXAMPLE
+
+** Setting Up
+
+   First, stow the directory as usual.
+
+   You will need to install zsh and oh my zsh as well. 
+
+*** Installing zsh
+    Use you favorite package manager
+**** Setting zsh as default shell
+     You will likely need to set zsh as the new default if you're coming from bash. First, make sure you have zsh by running:
+     #+BEGIN_EXAMPLE
+      zsh --version
+     #+END_EXAMPLE
+     If it is installed, you can change it to default by running:
+     #+BEGIN_EXAMPLE
+      chsh -s $(which zsh)
+     #+END_EXAMPLE
+*** Installing oh my zsh
+    Simple curl command:
+    #+BEGIN_EXAMPLE
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    #+END_EXAMPLE
+
+** Config
+
+   I use a modified version of the [[https://github.com/sindresorhus/pure][Pure theme]], that will be placed in the oh-my-zsh themes directory. My aliases are in the oh-my-zsh custom directory. Any basic config stuff in the in .zshrc file.
+

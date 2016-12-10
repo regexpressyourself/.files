@@ -1,0 +1,28 @@
+* Scripts
+  #+BEGIN_EXAMPLE
+scripts
+├── c_compiler.sh
+├── java_compiler.sh
+├── monitoroff.sh
+├── monitoron.sh
+├── nasm_compiler.sh
+└── toggletouchpad.sh
+  #+END_EXAMPLE
+
+** Setting Up
+
+   First, stow the directory as usual.
+
+   These are just a few scripts for stuff that I got sick of doing manually.
+
+   Note: Some files in the scripts directory are added from other folders in this repo. Those files serve very specific purposes, and it made sense to place them with the programs they work with, even if they end up in the ~/scripts directory.
+
+** Files
+| Script            | De /script/ ion                                                                                |
+|-------------------+------------------------------------------------------------------------------------------------|
+| c_compiler.sh     | Compiles <filename>.c programs into <filname>.o files                                          |
+| java_compiler.sh  | Compiles .java files into a directory called .class, and runs ~static void main()~             |
+| monitoroff.sh     | Turns off my second monitor from my laptop                                                     |
+| monitoron.sh      | Turns on my second monitor from my laptop                                                      |
+| nasm_compiler.sh  | Compiles and runs NASM programs                                                                |
+| toggletouchpad.sh | Toggles my trackpad on or off so I don't bump it accidentally. I bind this to my mic mute key. |

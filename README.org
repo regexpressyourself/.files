@@ -1,3 +1,33 @@
-# Sam's Dotfiles
+* Sam's Dotfiles
 
-A winter project to organize my config files.
+  A winter project to organize my config files.
+
+** Setting Up
+   All these files are managed using [[https://www.gnu.org/software/stow/][GNU's stow]]. It was originally made to keep different versions of programs organized neatly, but ends up working well as a kind of symlink manager. To link up files just run: 
+   (NOTE: Make sure that this repo is directly in your home directory)
+   #+BEGIN_EXAMPLE
+    $ stow <directory>
+   #+END_EXAMPLE
+   For example, if you want to link up my vim files, you could run:
+   #+BEGIN_EXAMPLE
+    $ stow vim
+   #+END_EXAMPLE
+   To link everything up at once, you can just string the arguments together:
+   #+BEGIN_EXAMPLE
+    $ stow emacs  git  i3  scripts  tmux  vim  x  zsh
+   #+END_EXAMPLE
+
+** Directories
+   | Directory | Description                                      |
+   |-----------+--------------------------------------------------|
+   | emacs     | [[https://www.gnu.org/software/emacs/][Emacs]] and [[http://spacemacs.org/][Spacemacs]] configs                      |
+   | git       | .gitconfig stuff                                 |
+   | i3        | [[https://i3wm.org/][i3 Window Manager]] & [[https://github.com/brndnmtthws/conky][Conky]] scripts                |
+   | scripts   | A few short helper scripts                       |
+   | tmux      | [[https://tmux.github.io/][Tmux]] config                                      |
+   | vim       | [[http://www.vim.org/][Vim]] and [[https://neovim.io/][Neovim]] configs/colors/etc                |
+   | x         | Basic config files like xresources, xmodmap, etc |
+   | zsh       | [[http://zsh.sourceforge.net/][Zsh]] and [[http://ohmyz.sh/][oh-my-zsh]] themes, configs, and more      |
+    
+
+
