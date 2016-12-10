@@ -1,0 +1,15 @@
+[user]
+	name = Sam Messina
+	email = samuel.messina@gmail.com
+[core]
+	editor = vim
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --graph --decorate --pretty=oneline --abbrev-commit
+    type = cat-file -t
+    dump = cat-file -p
+[credential "https://github.com"]
+	username = regexpressyourself
