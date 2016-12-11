@@ -51,7 +51,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run -font "ubuntu mono 18" -fg "#505050" -bg "#000000" -hlbg "#000000" -hlfg "#ffb964" -width 30 -lines 1 -padding 20 -seperator-style none -hide-scrollbar -bw 0 
+bindsym $mod+d exec rofi -show run -lines 5 -width 100 -padding 150 -fullscreen -font "Roboto 50" -separator-style "none"
+#bindsym $mod+d exec rofi -show run -font "ubuntu mono 18" -fg "#505050" -bg "#000000" -hlbg "#000000" -hlfg "#ffb964" -width 100 -lines 1 -seperator-style none -hide-scrollbar -bw 0 
 
 # bindsym $mod+d exec rofi -config /home/zookeeprr/config/.Xresources
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -225,4 +226,5 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 exec --no-startup-id nm-applet
+exec --no-startup-id compton
 
