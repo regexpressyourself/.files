@@ -30,12 +30,17 @@
    | zsh       | [[http://zsh.sourceforge.net/][Zsh]] and [[http://ohmyz.sh/][oh-my-zsh]] themes, configs, and more      |
     
 ** Photos
-
+*** Clean
 [[pics/clean.png]]
+*** Emacs
 [[pics/emacs.png]]
+*** Git
 [[pics/git.png]]
+*** Rofi
 [[pics/rofi.png]]
+*** Zsh
 [[pics/zsh.png]]
+*** Vim
 [[pics/vim.png]]
 
 
