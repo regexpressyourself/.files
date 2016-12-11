@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --image-bg black --bg-center '/home/zookeeprr/pictures/wallpapers/gpd.jpg' 
+feh  --bg-fill '/home/zookeeprr/pictures/wallpapers/rocks.jpg' 
