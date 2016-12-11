@@ -5,7 +5,8 @@ x
 ├── .xbindkeysrc
 ├── .xinitrc
 ├── .Xmodmap
-└── .Xresources
+├── .Xresources
+└── .xsession
   #+END_EXAMPLE
 
 ** Setting Up
