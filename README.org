@@ -29,5 +29,13 @@
    | x         | Basic config files like xresources, xmodmap, etc |
    | zsh       | [[http://zsh.sourceforge.net/][Zsh]] and [[http://ohmyz.sh/][oh-my-zsh]] themes, configs, and more      |
     
+** Photos
+
+[[pics/clean.png]]
+[[pics/emacs.png]]
+[[pics/git.png]]
+[[pics/rofi.png]]
+[[pics/zsh.png]]
+[[pics/vim.png]]
 
 
