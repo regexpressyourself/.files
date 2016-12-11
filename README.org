@@ -32,15 +32,15 @@
 ** Photos
 *** Clean
 [[pics/clean.png]]
-*** Emacs
-[[pics/emacs.png]]
-*** Git
-[[pics/git.png]]
 *** Rofi
 [[pics/rofi.png]]
-*** Zsh
-[[pics/zsh.png]]
+*** Emacs
+[[pics/emacs.png]]
 *** Vim
 [[pics/vim.png]]
+*** Git
+[[pics/git.png]]
+*** Zsh
+[[pics/zsh.png]]
 
 
