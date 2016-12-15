@@ -1,10 +1,4 @@
 * Git Config
-  #+BEGIN_EXAMPLE
-git
-├── .gitconfig
-└── README.org
-  #+END_EXAMPLE
-
 
   First, stow the directory as usual.
 

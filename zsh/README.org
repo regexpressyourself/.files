@@ -1,15 +1,4 @@
 * Zsh and oh-my-zsh Config
-  #+BEGIN_EXAMPLE
-zsh
-├── .dir_colors
-├── .oh-my-zsh
-│   ├── custom
-│   │   └── zsh_aliases.zsh
-│   └── themes
-│       └── sams-pure.zsh-theme
-├── README.org
-└── .zshrc
-  #+END_EXAMPLE
 
 ** Setting Up
 

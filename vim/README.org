@@ -1,32 +1,4 @@
 * Vim and Neovim Configs
-  #+BEGIN_EXAMPLE
-vim
-├── .config
-│   └── nvim
-│       ├── colors
-│       │   ├── coffee.vim
-│       │   ├── desert256.vim
-│       │   ├── gruvbox.vim
-│       │   ├── inkpot.vim
-│       │   ├── jellybeans.vim
-│       │   ├── molokai.vim
-│       │   ├── solarized.vim
-│       │   └── zenburn.vim
-│       └── init.vim
-├── README.org
-├── .vim
-│   └── colors
-│       ├── coffee.vim
-│       ├── desert256.vim
-│       ├── gruvbox.vim
-│       ├── inkpot.vim
-│       ├── jellybeans.vim
-│       ├── molokai.vim
-│       ├── solarized.vim
-│       └── zenburn.vim
-└── .vimrc
-
-  #+END_EXAMPLE
 
 ** Setting Up
 

@@ -1,13 +1,4 @@
 * Scripts
-  #+BEGIN_EXAMPLE
-scripts
-├── c_compiler.sh
-├── java_compiler.sh
-├── monitoroff.sh
-├── monitoron.sh
-├── nasm_compiler.sh
-└── toggletouchpad.sh
-  #+END_EXAMPLE
 
 ** Setting Up
 

@@ -1,15 +1,4 @@
 * i3 Window Manager & Conky Configs
-  #+BEGIN_EXAMPLE
-i3
-├── .conkyrc
-├── .i3
-│   ├── config
-│   └── conky-i3bar
-├── README.org
-└── scripts
-    └── player.sh
-
-  #+END_EXAMPLE
 
 ** Setting Up
 
