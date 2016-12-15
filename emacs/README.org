@@ -1,12 +1,4 @@
 * Emacs Config
-  #+BEGIN_EXAMPLE
-emacs
-├── README.org
-├── scripts
-│   └── ox-reveal.el
-└── .spacemacs
-  #+END_EXAMPLE
-
 
   First, stow the directory as usual.
 

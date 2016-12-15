@@ -1,16 +1,4 @@
 * X Configs
-  #+BEGIN_EXAMPLE
-x
-├── .config
-│   └── compton.conf
-├── .fehbg
-├── README.org
-├── .xbindkeysrc
-├── .xinitrc
-├── .Xmodmap
-├── .Xresources
-└── .xsession -> .xinitrc
-  #+END_EXAMPLE
 
 ** Setting Up
 

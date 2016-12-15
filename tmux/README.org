@@ -1,8 +1,4 @@
 * Tmux Terminal Multiplexer
-  #+BEGIN_EXAMPLE
-tmux
-└── .tmux.conf
-  #+END_EXAMPLE
 
 ** Setting Up
 
