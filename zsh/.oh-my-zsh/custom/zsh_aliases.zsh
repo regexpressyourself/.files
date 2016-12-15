@@ -88,7 +88,6 @@ alias ms="sh ~/scripts/monitoroff.sh"
 
 alias findfile="find . -name "
 
-alias firefox="firefox-aurora"
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
