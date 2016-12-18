@@ -44,6 +44,7 @@ values."
              colors-enable-rainbow-identifiers t)
      java
      javascript
+     react
      shell-scripts
      c-c++
      cscope
@@ -307,6 +308,7 @@ in `dotspacemacs/user-config'."
 
   (global-visual-line-mode t)
 
+  (add-to-list 'magic-mode-alist '("React" . react-mode))
 
   (global-set-key (kbd "C-c r") 'html-repeat)
 
