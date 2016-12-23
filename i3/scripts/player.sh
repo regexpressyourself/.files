@@ -25,6 +25,11 @@ INFO_TITLE=$(playerctl ${ARGUMENTS} metadata title)
 INFO_ALBUM=$(playerctl ${ARGUMENTS} metadata album)
 INFO_ARTIST=$(playerctl ${ARGUMENTS} metadata artist)
 
+# Escape double quotes
+INFO_TITLE=${INFO_TITLE//\"/\\\"}
+INFO_ALBUM=${INFO_ALBUM//\"/\\\"}
+INFO_ARTIST=${INFO_ARTIST//\"/\\\"}
+
 if [[ "${PLAYER_STATUS}" = "Paused" ]]; then
   CUR_ICON="${ICON_PAUSE}"
 elif [[ "${PLAYER_STATUS}" = "Playing" ]]; then

@@ -44,6 +44,7 @@ values."
              colors-enable-rainbow-identifiers t)
      java
      javascript
+     react
      shell-scripts
      c-c++
      cscope
@@ -259,7 +260,7 @@ It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
 
-
+  (setq helm-echo-input-in-header-line nil)
   (defun save-all ()
     (interactive)
     (save-some-buffers t))
@@ -307,6 +308,7 @@ in `dotspacemacs/user-config'."
 
   (global-visual-line-mode t)
 
+  (add-to-list 'magic-mode-alist '("React" . react-mode))
 
   (global-set-key (kbd "C-c r") 'html-repeat)
 

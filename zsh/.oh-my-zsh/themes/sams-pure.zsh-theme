@@ -26,31 +26,7 @@ setopt prompt_subst
 
 # Load required modules
 #
-autoload -Uz vcs_info
-
-# Set vcs_info parameters
-#
-zstyle ':vcs_info:*' enable hg bzr git
-zstyle ':vcs_info:*:*' unstagedstr '!'
-zstyle ':vcs_info:*:*' stagedstr '+'
-zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%s/%b" "%%u%c"
-zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%s/%b" "%u%c (%a)"
-zstyle ':vcs_info:*:*' nvcsformats "%~" "" ""
-
-# Fastest possible way to check if repo is dirty
-#
-git_dirty() {
-    # Check if we're in a git repo
-    command git rev-parse --is-inside-work-tree &>/dev/null || return
-    # Check if it's dirty
-    command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo "*"
-}
-
-# Display information about the current repository
-#
-repo_information() {
-    echo "%~ %F{8}$vcs_info_msg_1_`git_dirty` $vcs_info_msg_2_%f"
-}
+#autoload -Uz vcs_info
 
 # Displays the exec time of the last command if set threshold was exceeded
 #
@@ -70,14 +46,18 @@ preexec() {
 # Output additional information about paths, repos and exec time
 #
 precmd() {
-    vcs_info # Get version control info before we start outputting stuff
-    print -P "\n%F{blue}$(repo_information) %F{yellow}$(cmd_exec_time)%f"
+    print -P "\n%F{blue}%~ $(git_prompt_info) %F{yellow}$(cmd_exec_time)%f"
 }
 
 # Define prompts
 #
 PROMPT="%(?.%F{magenta}.%F{red})❯%f " # Display a red prompt char on failure
 RPROMPT="%F{8}${SSH_TTY:+%n@%m}%f"    # Display username if connected via SSH
+
+ZSH_THEME_GIT_PROMPT_CLEAN=") %{$fg_bold[green]%}✔ "
+ZSH_THEME_GIT_PROMPT_DIRTY=") %{$fg_bold[red]%}✗ "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[yellow]%}git:("
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 # ------------------------------------------------------------------------------
 #
