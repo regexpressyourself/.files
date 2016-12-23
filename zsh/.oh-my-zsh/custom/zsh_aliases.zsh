@@ -58,12 +58,12 @@ alias ls='ls --color'
 # song recording
 alias song="python2 ~/documents/school/goodsong.py"
 
-alias school="cd ~/documents/school/Fall2016"
+alias school="cd ~/documents/school/Sp2017"
 alias jobs="cd ~/documents/school/jobs"
-alias 335="cd ~/documents/school/Fall2016/335"
-alias 311="cd ~/documents/school/Fall2016/311"
-alias 412="cd ~/documents/school/Fall2016/412"
-alias eng="cd ~/documents/school/Fall2016/eng"
+alias 435="cd ~/documents/school/Sp2017/435"
+alias 410="cd ~/documents/school/Sp2017/410"
+alias math="cd ~/documents/school/Sp2017/math"
+alias eng="cd ~/documents/school/Sp2017/eng"
 
 alias song="cd ~/documents/school && python2 goodsong.py && cd -"
 alias lastsong="cd ~/documents/school && python2 goodsonglast.py && cd -"
