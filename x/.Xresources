@@ -58,6 +58,7 @@ URxvt.scrollBar: false
 !urxvt.letterSpace: -1
 
 
+*URxvt.perl-ext-common:		osc-xterm-clipboard
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
