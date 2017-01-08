@@ -24,6 +24,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
+     restclient
      better-defaults
      emacs-lisp
      markdown
@@ -45,6 +46,7 @@ values."
      java
      javascript
      react
+     ivy
      shell-scripts
      c-c++
      cscope
