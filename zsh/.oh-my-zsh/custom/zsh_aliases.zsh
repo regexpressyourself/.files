@@ -93,4 +93,3 @@ alias findfile="find . -name "
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-export PATH=~/.local/bin:$PATH
