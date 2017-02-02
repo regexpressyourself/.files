@@ -11,5 +11,6 @@ Plug 'https://github.com/tpope/vim-sensible.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/SirVer/ultisnips.git'
 Plug 'https://github.com/tpope/vim-unimpaired.git'
+Plug 'https://github.com/mxw/vim-jsx.git'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
