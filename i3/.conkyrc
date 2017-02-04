@@ -36,10 +36,26 @@ cpu_avg_samples 2
 TEXT
 
 
-[{ "full_text" : "${exec ~/scripts/player.sh}" , "color" : "\#388E3C" }, 
-{ "full_text" : "Bat: ${battery_short BAT0}" , "color" : "\#CC6666" }, 
-{ "full_text" : "${addr wlp3s0}" ,"color":"\#B5BD68" },
-{"full_text" : "RAM: ${memperc}%" , "color" :
-     ${if_match ${memperc}<90}"\#8e8ecc"${else}"\#ff3232"${endif} },
-{ "full_text" : "${exec weather-report --headers='Temperature' -q | awk '/Temperature/ {printf("%.0f", $2)}'}F ${exec weather-report --headers='Sky conditions' -q | awk '/Sky conditions/ {print $3 " " $4}'}"},
-{ "full_text" : " ${time %I:%M - %a %b %e}" , "color" : "\#C5C8C6" }],
+[
+    {"full_text" : "${exec ~/scripts/player.sh}" ,
+     "color"     : "\#388E3C" 
+     },
+    {"full_text" : "Bat: ${battery_short BAT0}" ,
+     "color"     : "\#CC6666" 
+     },
+    {"full_text" : "${addr wlp3s0}" ,
+     "color"     :"\#B5BD68" 
+     },
+    {"full_text" : "RAM: ${memperc}%" ,
+     "color"     : ${if_match ${memperc}<90} "\#8e8ecc" ${else}"\#ff3232" ${endif} 
+     },
+    {"full_text" : "☀ ${exec weather-report --headers='Temperature' -q | awk '/Temperature/ {printf("%.0f", $2)}'}F",
+    "color"      : "\#ffa500"
+    },
+    {"full_text" : "♫ ${exec amixer -c 0 get Master | grep Mono: | cut -d ' ' -f6}",
+    "color"      : "\#4abdac"
+    },
+    {"full_text" : " ${time %I:%M - %a %b %e}",
+    "color" : "\#C5C8C6" 
+    }
+],
