@@ -58,12 +58,12 @@ alias ls='ls --color'
 # song recording
 alias song="python2 ~/documents/school/goodsong.py"
 
-alias school="cd ~/documents/school/Sp2017"
 alias jobs="cd ~/documents/school/jobs"
-alias 435="cd ~/documents/school/Sp2017/435"
-alias 410="cd ~/documents/school/Sp2017/410"
-alias math="cd ~/documents/school/Sp2017/math"
-alias eng="cd ~/documents/school/Sp2017/eng"
+alias school="cd ~/documents/school/Fall2017"
+alias 407="cd ~/documents/school/Fall2017/407"
+alias bio="cd ~/documents/school/Fall2017/bio"
+alias 437="cd ~/documents/school/Fall2017/437"
+alias 498="cd ~/documents/school/Fall2017/498"
 
 alias song="cd ~/documents/school && python2 goodsong.py && cd -"
 alias lastsong="cd ~/documents/school && python2 goodsonglast.py && cd -"
@@ -93,3 +93,4 @@ alias findfile="find . -name "
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+alias siu="passman -u trina -p siu"

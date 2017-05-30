@@ -19,10 +19,13 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 nnoremap <CR> G
 nnoremap <BS> gg
-noremap <leader>h :bp<CR>
-noremap <leader>l :bn<CR>
-noremap <leader>k :ls<CR>
-noremap <leader>j :b<CR>
+nnoremap H ^
+nnoremap L $
+noremap <leader>bp :bp<CR>
+noremap <leader>bn :bn<CR>
+noremap <leader>bb :ls<CR>
+noremap <leader>bd :bd<CR>
+noremap <leader>ff :e
 :nmap j gj
 :nmap k gk
 " movement assistance

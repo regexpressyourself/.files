@@ -1,21 +1,24 @@
 [user]
-	name = Sam Messina
-	email = samuel.messina@gmail.com
+  name = Sam Messina
+  email = samuel.messina@gmail.com
 [core]
-	editor = vim
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  editor = vim
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
-    co = checkout
-    ci = commit
-    st = status
-    br = branch
-    hist = log --graph --decorate --pretty=oneline --abbrev-commit
-    type = cat-file -t
-    dump = cat-file -p
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --graph --decorate --pretty=oneline --abbrev-commit
+  type = cat-file -t
+  dump = cat-file -p
+	ctags = !.git/hooks/ctags
 [credential "https://github.com"]
-	username = regexpressyourself
+  username = regexpressyourself
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[init]
+	templatedir = ~/.git_template

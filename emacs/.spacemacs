@@ -27,7 +27,8 @@ values."
      restclient
      better-defaults
      emacs-lisp
-     markdown
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
      (org :variables
           org-enable-reveal-js-support t
           org-enable-github-support t
@@ -48,13 +49,16 @@ values."
      java
      javascript
      react
+     python
+     (typescript :variables
+                 typescript-fmt-tool 'typescript-formatter)
      shell-scripts
      c-c++
      cscope
      ibuffer
      sql
      ycmd
-     gtags
+     (gtags :variables gtags-enable-by-default t)
      evil-snipe
      latex
      )
@@ -122,7 +126,7 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          zenburn
-                         gruvbox
+                         dracula
                          material
                          sanityinc-tomorrow-night
                          )
@@ -134,7 +138,7 @@ values."
                                :size 15
                                :weight normal
                                :width normal
-                               :powerline-scale 1.2)
+                               :powerline-scale 1.3)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -263,11 +267,26 @@ It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
 
+
+  (with-eval-after-load 'python
+    (defun python-shell-completion-native-try ()
+      "Return non-nil if can trigger native completion."
+      (let ((python-shell-completion-native-enable t)
+            (python-shell-completion-native-output-timeout
+             python-shell-completion-native-try-output-timeout))
+        (python-shell-completion-native-get-completions
+         (get-buffer-process (current-buffer))
+         nil "_"))))
+
+
 (setq mc/cmds-to-run-for-all
  '(
      evil-change
      evil-force-normal-state
      evil-normal-state
+     evil-backward-word-begin
+     evil-forward-word-begin
+     evil-delete
   ))
 
   (setq helm-echo-input-in-header-line nil)
@@ -345,6 +364,7 @@ layers configuration. You are free to put any user code."
  '(ansi-color-names-vector
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(evil-want-Y-yank-to-eol t)
+ '(fci-rule-color "#383838" t)
  '(hl-sexp-background-color "#1c1f26")
  '(nrepl-message-colors
    (quote
@@ -352,7 +372,7 @@ layers configuration. You are free to put any user code."
  '(org-agenda-files (quote ("~/documents/school/Sp2017/todo")))
  '(package-selected-packages
    (quote
-    (ox-twbs ox-gfm org company-shell simple-httpd flyspell-correct-helm wgrep smex ivy-hydra flyspell-correct-ivy counsel-projectile counsel swiper ivy org-download link-hint hide-comnt eyebrowse evil-snipe dumb-jump company-emacs-eclim column-enforce-mode restclient ob-http pug-mode org-projectile git-link eshell-z skewer-mode ox-reveal writeroom-mode color-theme-sanityinc-tomorrow material-theme solarized-theme zenburn-theme xterm-color ws-butler window-numbering web-mode web-beautify volatile-highlights vi-tilde-fringe toc-org tagedit stickyfunc-enhance srefactor sql-indent spotify spacemacs-theme spaceline powerline smooth-scrolling smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox hydra spinner page-break-lines orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jade-mode info+ indent-guide ido-vertical-mode ibuffer-projectile hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-spotify multi helm-projectile helm-mode-manager helm-make projectile helm-gtags helm-gitignore helm-flyspell helm-flx helm-descbinds helm-css-scss helm-cscope xcscope helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md ggtags flycheck-ycmd flycheck-pos-tip flycheck pkg-info epl flx-ido flx fish-mode fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-cleverparens smartparens paredit evil-args evil-anzu anzu eval-sexp-fu highlight eshell-prompt-extras esh-help emmet-mode elisp-slime-nav eclim drupal-mode php-mode disaster diff-hl define-word company-ycmd f ycmd request-deferred request deferred company-web web-completion-data company-tern s dash-functional tern company-statistics company-quickhelp pos-tip company-c-headers company-auctex company coffee-mode cmake-mode clean-aindent-mode clang-format buffer-move bracketed-paste auto-yasnippet yasnippet auto-highlight-symbol auto-dictionary auto-compile packed dash auctex-latexmk auctex aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup quelpa package-build use-package which-key bind-key bind-map evil gruvbox-theme)))
+    (uuidgen mwim livid-mode insert-shebang flyspell-correct evil-visual-mark-mode evil-unimpaired goto-chg undo-tree diminish color-identifiers-mode tide typescript-mode winum unfill restclient-helm ob-restclient fuzzy company-restclient know-your-http-well yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic sanityinc-tomorrow-night-eighties-theme tomorrow-night-eighties-theme-theme tomorrow-night-eighties-theme tommorrow-night-eighties-theme ample-zen-theme tangotango-theme vmd-mode evil-ediff dracula-theme ox-twbs ox-gfm org company-shell simple-httpd flyspell-correct-helm wgrep smex ivy-hydra flyspell-correct-ivy counsel-projectile counsel swiper ivy org-download link-hint hide-comnt eyebrowse evil-snipe dumb-jump company-emacs-eclim column-enforce-mode restclient ob-http pug-mode org-projectile git-link eshell-z skewer-mode ox-reveal writeroom-mode color-theme-sanityinc-tomorrow material-theme solarized-theme zenburn-theme xterm-color ws-butler window-numbering web-mode web-beautify volatile-highlights vi-tilde-fringe toc-org tagedit stickyfunc-enhance srefactor sql-indent spotify spacemacs-theme spaceline powerline smooth-scrolling smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox hydra spinner page-break-lines orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jade-mode info+ indent-guide ido-vertical-mode ibuffer-projectile hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-spotify multi helm-projectile helm-mode-manager helm-make projectile helm-gtags helm-gitignore helm-flyspell helm-flx helm-descbinds helm-css-scss helm-cscope xcscope helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md ggtags flycheck-ycmd flycheck-pos-tip flycheck pkg-info epl flx-ido flx fish-mode fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-cleverparens smartparens paredit evil-args evil-anzu anzu eval-sexp-fu highlight eshell-prompt-extras esh-help emmet-mode elisp-slime-nav eclim drupal-mode php-mode disaster diff-hl define-word company-ycmd f ycmd request-deferred request deferred company-web web-completion-data company-tern s dash-functional tern company-statistics company-quickhelp pos-tip company-c-headers company-auctex company coffee-mode cmake-mode clean-aindent-mode clang-format buffer-move bracketed-paste auto-yasnippet yasnippet auto-highlight-symbol auto-dictionary auto-compile packed dash auctex-latexmk auctex aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup quelpa package-build use-package which-key bind-key bind-map evil gruvbox-theme)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
@@ -381,6 +401,7 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:background "#282828" :foreground "#fdf4c1"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
  '(org-level-1 ((t (:height 2.2))))

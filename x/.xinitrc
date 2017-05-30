@@ -8,3 +8,5 @@ xmodmap ~/.Xmodmap
 exec i3
 nm-applet
 xrandr --dpi 125.37
+
+
