@@ -26,7 +26,9 @@ values."
      auto-completion
      restclient
      better-defaults
+     pandoc
      emacs-lisp
+     chrome
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      (org :variables
@@ -69,6 +71,8 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
                                       multiple-cursors
+                                      dash
+                                      autothemer
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
@@ -125,6 +129,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         gruvbox
                          zenburn
                          dracula
                          material
@@ -134,8 +139,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
-                               :size 15
+   dotspacemacs-default-font '("Inconsolata"
+                               :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.3)
@@ -349,7 +354,10 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-
+  (setq edit-server-url-major-mode-alist
+        '(("github\\.com" . org-mode)))
+  (setq mac-option-modifier 'super)
+  (setq mac-command-modifier 'meta)
   (setq org-src-tab-acts-natively t)
   )
 ;; Do not write anything past this comment. This is where Emacs will
@@ -372,7 +380,7 @@ layers configuration. You are free to put any user code."
  '(org-agenda-files (quote ("~/documents/school/Sp2017/todo")))
  '(package-selected-packages
    (quote
-    (uuidgen mwim livid-mode insert-shebang flyspell-correct evil-visual-mark-mode evil-unimpaired goto-chg undo-tree diminish color-identifiers-mode tide typescript-mode winum unfill restclient-helm ob-restclient fuzzy company-restclient know-your-http-well yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic sanityinc-tomorrow-night-eighties-theme tomorrow-night-eighties-theme-theme tomorrow-night-eighties-theme tommorrow-night-eighties-theme ample-zen-theme tangotango-theme vmd-mode evil-ediff dracula-theme ox-twbs ox-gfm org company-shell simple-httpd flyspell-correct-helm wgrep smex ivy-hydra flyspell-correct-ivy counsel-projectile counsel swiper ivy org-download link-hint hide-comnt eyebrowse evil-snipe dumb-jump company-emacs-eclim column-enforce-mode restclient ob-http pug-mode org-projectile git-link eshell-z skewer-mode ox-reveal writeroom-mode color-theme-sanityinc-tomorrow material-theme solarized-theme zenburn-theme xterm-color ws-butler window-numbering web-mode web-beautify volatile-highlights vi-tilde-fringe toc-org tagedit stickyfunc-enhance srefactor sql-indent spotify spacemacs-theme spaceline powerline smooth-scrolling smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox hydra spinner page-break-lines orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jade-mode info+ indent-guide ido-vertical-mode ibuffer-projectile hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-spotify multi helm-projectile helm-mode-manager helm-make projectile helm-gtags helm-gitignore helm-flyspell helm-flx helm-descbinds helm-css-scss helm-cscope xcscope helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md ggtags flycheck-ycmd flycheck-pos-tip flycheck pkg-info epl flx-ido flx fish-mode fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-cleverparens smartparens paredit evil-args evil-anzu anzu eval-sexp-fu highlight eshell-prompt-extras esh-help emmet-mode elisp-slime-nav eclim drupal-mode php-mode disaster diff-hl define-word company-ycmd f ycmd request-deferred request deferred company-web web-completion-data company-tern s dash-functional tern company-statistics company-quickhelp pos-tip company-c-headers company-auctex company coffee-mode cmake-mode clean-aindent-mode clang-format buffer-move bracketed-paste auto-yasnippet yasnippet auto-highlight-symbol auto-dictionary auto-compile packed dash auctex-latexmk auctex aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup quelpa package-build use-package which-key bind-key bind-map evil gruvbox-theme)))
+    (pandoc-mode ox-pandoc ht autothemer gmail-message-mode ham-mode html-to-markdown flymd edit-server uuidgen mwim livid-mode insert-shebang flyspell-correct evil-visual-mark-mode evil-unimpaired goto-chg undo-tree diminish color-identifiers-mode tide typescript-mode winum unfill restclient-helm ob-restclient fuzzy company-restclient know-your-http-well yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic sanityinc-tomorrow-night-eighties-theme tomorrow-night-eighties-theme-theme tomorrow-night-eighties-theme tommorrow-night-eighties-theme ample-zen-theme tangotango-theme vmd-mode evil-ediff dracula-theme ox-twbs ox-gfm org company-shell simple-httpd flyspell-correct-helm wgrep smex ivy-hydra flyspell-correct-ivy counsel-projectile counsel swiper ivy org-download link-hint hide-comnt eyebrowse evil-snipe dumb-jump company-emacs-eclim column-enforce-mode restclient ob-http pug-mode org-projectile git-link eshell-z skewer-mode ox-reveal writeroom-mode color-theme-sanityinc-tomorrow material-theme solarized-theme zenburn-theme xterm-color ws-butler window-numbering web-mode web-beautify volatile-highlights vi-tilde-fringe toc-org tagedit stickyfunc-enhance srefactor sql-indent spotify spacemacs-theme spaceline powerline smooth-scrolling smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-mode rainbow-identifiers rainbow-delimiters popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox hydra spinner page-break-lines orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jade-mode info+ indent-guide ido-vertical-mode ibuffer-projectile hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-spotify multi helm-projectile helm-mode-manager helm-make projectile helm-gtags helm-gitignore helm-flyspell helm-flx helm-descbinds helm-css-scss helm-cscope xcscope helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md ggtags flycheck-ycmd flycheck-pos-tip flycheck pkg-info epl flx-ido flx fish-mode fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-cleverparens smartparens paredit evil-args evil-anzu anzu eval-sexp-fu highlight eshell-prompt-extras esh-help emmet-mode elisp-slime-nav eclim drupal-mode php-mode disaster diff-hl define-word company-ycmd f ycmd request-deferred request deferred company-web web-completion-data company-tern s dash-functional tern company-statistics company-quickhelp pos-tip company-c-headers company-auctex company coffee-mode cmake-mode clean-aindent-mode clang-format buffer-move bracketed-paste auto-yasnippet yasnippet auto-highlight-symbol auto-dictionary auto-compile packed dash auctex-latexmk auctex aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup quelpa package-build use-package which-key bind-key bind-map evil gruvbox-theme)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
@@ -403,12 +411,4 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(default ((t (:background "#282828" :foreground "#fdf4c1"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
- '(org-level-1 ((t (:height 2.2))))
- '(org-level-2 ((t (:height 2.05))))
- '(org-level-3 ((t (:height 1.9))))
- '(org-level-4 ((t (:height 1.75))))
- '(org-level-5 ((t (:height 1.6))))
- '(org-level-6 ((t (:height 1.45))))
- '(org-level-7 ((t (:height 1.3))))
- '(org-level-8 ((t (:height 1.15)))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))

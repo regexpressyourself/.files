@@ -2,3 +2,4 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/u
 export EDITOR='nvim'
 
 export PATH=~/.local/bin:$PATH
+export PATH=/bin:$PATH

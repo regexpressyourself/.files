@@ -15,8 +15,9 @@ filetype plugin on
 filetype on
 syntax enable
 syntax on 
-set clipboard+=unnamedplus
+set clipboard=unnamed
 set autowriteall
+set autowrite
 set nocompatible
 set colorcolumn=80  " highlights text after column [85]
 set autoindent      " align the new line indent with the previous line
@@ -43,3 +44,4 @@ au FocusLost * :wa  " save file when alt-tabbing
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
 call deoplete#enable()
+set noshowmatch
