@@ -3,12 +3,8 @@ let mapleader = "\<Space>" "leader to space
 "space-w saves
 nnoremap <Leader>w :w<CR> 
 " leader y/p to copy to clipboard
-vmap <Leader>y "*y 
-vmap <Leader>d "*d
-nmap <Leader>p "*p
-nmap <Leader>P "*P
-vmap <Leader>p "*p
-vmap <Leader>P "*P
+nmap <Leader>p :set ft=php<CR>
+nmap <Leader>h :set ft=html<CR>
 "expand selected region on hitting v
 vmap v <Plug>(expand_region_expand)
 "reduce selected region on hitting c-v
@@ -21,15 +17,30 @@ nnoremap <CR> G
 nnoremap <BS> gg
 nnoremap H ^
 nnoremap L $
-noremap <leader>bp :bp<CR>
-noremap <leader>bn :bn<CR>
-noremap <leader>bb :ls<CR>
-noremap <leader>bd :bd<CR>
-noremap <leader>ff :e
 :nmap j gj
 :nmap k gk
 " movement assistance
 cnoremap sudow w !sudo tee % >/dev/null
-nnoremap <F8> :tabn<CR>
-nnoremap <F7> :tabp<CR>
+nnoremap <leader>tp :tabprevious<CR>
+nnoremap <leader>tn :tabnext<CR>
+nnoremap <leader>tt :tabnew<CR>
+inoremap <leader>tp <Esc>:tabprevious<CR>i
+inoremap <leader>tn <Esc>:tabnext<CR>i
+inoremap <leader>tt <Esc>:tabnew<CR>
+
 vmap <silent> <expr> p <sid>Repl()
+
+
+nnoremap <Leader>fr :FZF<CR>
+nnoremap <Leader>fg :GFiles?<CR>
+nnoremap <Leader>fl :Lines<CR>
+nnoremap <Leader>ll :BLines<CR>
+noremap <leader>bp :bp<CR>
+noremap <leader>bn :bn<CR>
+noremap <leader>bb :Buffers<CR>
+noremap <leader>bd :bd<CR>
+noremap <leader>ff :e
+
+noremap <leader>] <C-]>
+noremap <leader>[ <C-t>
+noremap <leader>. :TagbarToggle<CR>

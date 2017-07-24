@@ -51,9 +51,8 @@ tmux new-session -As `basename $PWD`
 }
 alias tnew="new-tmux-from-dir-name"
 
-eval $( dircolors -b $HOME/.dir_colors )
 alias dir='dir --color'
-alias ls='ls --color'
+alias ls='ls -G'
 
 # song recording
 alias song="python2 ~/documents/school/goodsong.py"
@@ -94,3 +93,12 @@ alias findfile="find . -name "
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias siu="passman -u trina -p siu"
+
+alias mu="cd /var/www/html/macupdate.com"
+
+alias emacs="Emacs -nw"
+
+alias of="vim \$(fzf --height 40% --reverse --border)"
+alias fzf="fzf --height 40% --reverse --border"
+
+alias tmu="bash ~/scripts/tail_error.sh"

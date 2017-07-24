@@ -13,17 +13,25 @@ Plug 'https://github.com/SirVer/ultisnips.git'
 Plug 'https://github.com/tpope/vim-unimpaired.git'
 Plug 'https://github.com/mxw/vim-jsx.git'
 Plug 'https://github.com/ervandew/supertab.git'
+Plug 'https://github.com/majutsushi/tagbar.git'
+Plug 'SirVer/ultisnips'
+Plug 'https://github.com/gabrielelana/vim-markdown.git'
+Plug 'honza/vim-snippets'
 Plug 'https://github.com/mxw/vim-jsx.git'
 Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'pangloss/vim-javascript'
+Plug 'https://github.com/sjl/vitality.vim.git'
+"Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'https://github.com/gcmt/taboo.vim.git'
 call plug#end()
 
 let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['eslint']
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
