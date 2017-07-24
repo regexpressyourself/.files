@@ -1,9 +1,10 @@
 [user]
-  name = Sam Messina
-  email = sam@macupdate.com
+	name = Sam Messina
+	email = sam@macupdate.com
 [core]
   editor = vim
   pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /Users/macupdate/.gitignore_global
 [alias]
   co = checkout
   ci = commit
@@ -24,3 +25,14 @@
   newHighlight = green bold 22
 [init]
 	templatedir = ~/.git-templates
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "gitignore"]
+	clean = "sed '/#gitignore$/'d"
+	smudge = cat
+[commit]
+	template = /Users/macupdate/.stCommitMsg

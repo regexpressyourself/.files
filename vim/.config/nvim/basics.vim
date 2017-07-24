@@ -28,8 +28,7 @@ set ruler           " show line, word, etc in status bar
 set wrap "nowrap    " wraps words
 set linebreak
 set relativenumber  " display lines in distance relative to current line
-exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-set list            " shows whitespace characters
+set nolist            " shows whitespace characters
 set number
 set encoding=utf-8  " allows utf-8 characters
 set showmode        " shows current mode
