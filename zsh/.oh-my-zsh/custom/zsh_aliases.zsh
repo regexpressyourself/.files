@@ -116,7 +116,6 @@ alias findfile="find . -name "
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias siu="passman -u trina -p siu"
 
 alias mu="cd /var/www/html/macupdate.com"
 
@@ -135,3 +134,7 @@ alias cal='khal interactive'
 alias rm='rm -v'
 alias cp='cp -v'
 alias mv='mv -v'
+
+alias light="bash /home/zookeeprr/scripts/light.sh"
+alias dark="bash /home/zookeeprr/scripts/dark.sh"
+alias urxvt="urxvt -b 0"
