@@ -1,1 +1,1 @@
-/home/zookeeprr/dotfiles/vim/.config/nvim/darkcolors.vim
+/home/zookeeprr/dotfiles/vim/.config/nvim/lightcolors.vim
