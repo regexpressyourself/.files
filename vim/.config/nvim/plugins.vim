@@ -1,8 +1,10 @@
 "Plugins-------------------------------------------------------------------
 call plug#begin()
 Plug 'https://github.com/scrooloose/syntastic.git'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
-Plug 'https://github.com/bling/vim-airline.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/tpope/vim-endwise.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
@@ -27,8 +29,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'airblade/vim-gitgutter'
+Plug 'iCyMind/NeoSolarized'
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'https://github.com/gcmt/taboo.vim.git'
+
 call plug#end()
 
 let g:jsx_ext_required = 0

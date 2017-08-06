@@ -15,6 +15,7 @@ filetype plugin on
 filetype on
 syntax enable
 syntax on 
+set clipboard+=unnamedplus
 set clipboard=unnamed
 set autowriteall
 set autowrite

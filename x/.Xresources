@@ -1,85 +1,84 @@
-
-URxvt*font: xft:Inconsolata:Regular:pixelsize=17
-URxvt*foreground: #eff0eb
-URxvt*background: #282a36
-URxvt*cursorColor: #97979b
+URxvt*font: xft:Inconsolata:Regular:pixelsize=22
 URxvt.letterSpace: -1
-
-! Black + DarkGrey
-URxvt*color0: #282a36
-URxvt*color8: #686868
-
-! DarkRed + Red
-URxvt*color1: #ff5c57
-URxvt*color9: #ff5c57
-
-! DarkGreen + Green
-URxvt*color2: #5af78e
-URxvt*color10:#5af78e
-
-! DarkYellow + Yellow
-URxvt*color3: #f3f99d
-URxvt*color11:#f3f99d
-
-! DarkBlue + Blue
-URxvt*color4: #57c7ff
-URxvt*color12:#57c7ff
-
-! DarkMagenta + Magenta
-URxvt*color5: #ff6ac1
-URxvt*color13:#ff6ac1
-
-! DarkCyan + Cyan (both not tango)
-URxvt*color6: #9aedfe
-URxvt*color14:#9aedfe
-
-! LightGrey + White
-URxvt*color7: #eff0eb
-URxvt*color15:#f1f1f0
-
-
-
-
 Xcursor.theme: numix
-
-!!Configure urxvt terminal
 URtxvt.termName:         rxvt-unicode
 !URxvt.bitdepth:         32
 URxvt.saveLines:        5120
 URxvt.multichar_encoding: utf-8
 URxvt.mapAlert:         true
 URxvt.visualBell:       true
-URxvt.urlLauncher:      firefox
+URxvt.urlLauncher:      chromium
 URxvt.matcher.button:   1
 !URxvt.transparent:      true
 URxvt.perl-ext-common:  default,matcher,-option-popup,-selection-popup,-readline
 URxvt.xftAntialias:     true
 URxvt.scrollBar: false
-!urxvt.letterSpace: -1
-
-
 *URxvt.perl-ext-common:		osc-xterm-clipboard
+!urxvt.letterSpace: -1
+vim: set ft=xdefaults:
+URxvt*cursorColor: #928374
+! -----------------------------------------------------------------------------
+! File: gruvbox-dark.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
 
-! ------------------------------------------------------------------------------
+
+! -----------------------------------------------------------------------------
+! File: gruvbox-urxvt256.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 13 Dec 2013
+! -----------------------------------------------------------------------------
+
+! hard contrast: *background: #1d2021
+*background: #1d2021
+!*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+!!! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #002b37, #002b37, #003642
-rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
-rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
-rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
-rofi.opacity: 90
+!
+!
+rofi.opacity: 30
 
-!rofi.terminal:  urxvt
-!rofi.lines:   10
-!rofi.eh:    2
-!rofi.width:   1366
-!rofi.padding: 633
-!rofi.opacity: 95
-!rofi.bw:    0
-!rofi.bc:    #032c36
-!rofi.bg:    #032c36
-!rofi.fg:    #065f73
-!rofi.hlbg:    #032c36
-!rofi.hlfg:    #a2d9b1
-!rofi.font: Inconsolata 10
+! Enable the extended coloring options
+rofi.color-enabled: true
+
+!                  bg       border   separator
+rofi.color-window: #282828, #a89984, #a89984
+
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #282828, #ebdbb2, #32302f, #665c54, #fbf1c7
+rofi.color-active: #d79921, #282828, #d79921, #fabd2f, #282828
+rofi.color-urgent: #cc241d, #282828, #cc241d, #fb4934, #282828
+
+rofi.font: Inconsolata 19

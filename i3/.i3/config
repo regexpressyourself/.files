@@ -33,7 +33,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Inconsolata 8
+font pango:Inconsolata 12
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -52,9 +52,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run -lines 5 -width 100 -padding 150 -fullscreen -font "Roboto 50" -separator-style "none"
-#bindsym $mod+d exec rofi -show run -font "ubuntu mono 18" -fg "#505050" -bg "#000000" -hlbg "#000000" -hlfg "#ffb964" -width 100 -lines 1 -seperator-style none -hide-scrollbar -bw 0 
 
-# bindsym $mod+d exec rofi -config /home/zookeeprr/config/.Xresources
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -180,7 +178,7 @@ bar {
     mode dock
     position bottom
     workspace_buttons yes
-    font pango:Inconsolata 9 
+    font pango:Inconsolata 12
 #    font -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
     colors {
         background #151515
@@ -192,7 +190,7 @@ bar {
     }
 }
 
-set $Locker lock 
+set $Locker i3lock-fancy
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
