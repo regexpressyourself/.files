@@ -23,3 +23,5 @@ endfunction
 
 
 tnoremap <Esc> <C-\><C-n>
+
+

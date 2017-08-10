@@ -102,3 +102,4 @@ alias of="vim \$(fzf --height 40% --reverse --border)"
 alias fzf="fzf --height 40% --reverse --border"
 
 alias tmu="bash ~/scripts/tail_error.sh"
+

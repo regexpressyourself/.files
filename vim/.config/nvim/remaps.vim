@@ -39,8 +39,10 @@ noremap <leader>bp :bp<CR>
 noremap <leader>bn :bn<CR>
 noremap <leader>bb :Buffers<CR>
 noremap <leader>bd :bd<CR>
-noremap <leader>ff :e
+noremap <leader>ff :e<Space>
 
 noremap <leader>] <C-]>
 noremap <leader>[ <C-t>
 noremap <leader>. :TagbarToggle<CR>
+
+

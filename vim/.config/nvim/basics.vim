@@ -18,6 +18,7 @@ syntax on
 set clipboard=unnamed
 set autowriteall
 set autowrite
+set autoread
 set nocompatible
 set colorcolumn=80  " highlights text after column [85]
 set autoindent      " align the new line indent with the previous line

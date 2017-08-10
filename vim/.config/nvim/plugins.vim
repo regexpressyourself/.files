@@ -25,6 +25,7 @@ Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'https://github.com/gcmt/taboo.vim.git'
+Plug 'https://github.com/tpope/vim-fugitive.git'
 call plug#end()
 
 let g:jsx_ext_required = 0

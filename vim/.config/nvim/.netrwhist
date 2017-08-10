@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/macupdate/Documents'
+let g:netrw_dirhist_2='/private/var/www/html/macupdate.com/application/views'
+let g:netrw_dirhist_3='/Users/macupdate/Documents'
+let g:netrw_dirhist_4='/private/var/www/html/macupdate.com/application/layouts/scripts/include_bundles/styles'
