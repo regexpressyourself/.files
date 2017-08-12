@@ -133,3 +133,8 @@ alias mv='mv -v'
 alias light="bash /home/zookeeprr/scripts/light.sh"
 alias dark="bash /home/zookeeprr/scripts/dark.sh"
 alias urxvt="urxvt -b 0"
+
+alias play="playerctl play"
+alias pause="playerctl pause"
+alias next="playerctl next"
+alias prev="playerctl prev"
