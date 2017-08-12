@@ -80,3 +80,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
+  alias vim='nvr'
+fi
