@@ -78,18 +78,13 @@ alias dir='dir --color'
 alias ls='ls --color' 
 
 
-# song recording
-alias song="python2 ~/documents/school/goodsong.py"
 
-alias jobs="cd ~/documents/school/jobs"
 alias school="cd ~/documents/school/Fall2017"
 alias 407="cd ~/documents/school/Fall2017/407"
-alias bio="cd ~/documents/school/Fall2017/bio"
 alias 437="cd ~/documents/school/Fall2017/437"
-alias 498="cd ~/documents/school/Fall2017/498"
-
-alias song="cd ~/documents/school && python2 goodsong.py && cd -"
-alias lastsong="cd ~/documents/school && python2 goodsonglast.py && cd -"
+alias 498="cd ~/documents/school/Fall2017/SeniorProject"
+alias phls="cd ~/documents/school/Fall2017/PHLS"
+alias pols="cd ~/documents/school/Fall2017/POLS"
 
 # TaskWarrior
 alias tasks="task list && task calendar"
