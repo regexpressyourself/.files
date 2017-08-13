@@ -1,4 +1,4 @@
-URxvt*font: xft:Inconsolata:Regular:pixelsize=22
+URxvt*font: xft:Inconsolata:Regular:pixelsize=20
 URxvt.letterSpace: -1
 Xcursor.theme: numix
 URtxvt.termName:         rxvt-unicode
