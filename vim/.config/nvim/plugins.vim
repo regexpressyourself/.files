@@ -2,6 +2,7 @@
 call plug#begin()
 Plug 'https://github.com/scrooloose/syntastic.git'
 Plug 'morhetz/gruvbox'
+Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
