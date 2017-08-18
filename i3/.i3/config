@@ -21,6 +21,7 @@ for_window [class="^Chrome$" title=" - Chromium$"] border none
 for_window [class="Firefox"] border none
 for_window [class="Emacs"] border none
 for_window [class="qutebrowser"] border none
+for_window [class="Termite"] border none
 for_window [class="Eclipse"] border none
 for_window [class="URxvt" ] border none
 for_window [class="Spotify"] border none
