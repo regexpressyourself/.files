@@ -1,9 +1,9 @@
 "Plugins-------------------------------------------------------------------
 call plug#begin()
-Plug 'https://github.com/scrooloose/syntastic.git'
 Plug 'morhetz/gruvbox'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/tpope/vim-endwise.git'
@@ -37,6 +37,5 @@ Plug 'https://github.com/gcmt/taboo.vim.git'
 call plug#end()
 
 let g:jsx_ext_required = 0
-let g:syntastic_javascript_checkers = ['eslint']
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1

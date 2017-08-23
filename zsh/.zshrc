@@ -64,7 +64,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 # else
-#   export EDITOR='mvim'
+export EDITOR='nvim'
 # fi
 
 # Compilation flags

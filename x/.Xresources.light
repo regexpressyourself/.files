@@ -99,4 +99,3 @@ rofi.color-window: #fbf1c7, #7c6f64, #7c6f64
 rofi.color-normal: #fbf1c7, #3c3836, #f2e5bc, #d5c4a1, #282828
 rofi.color-active: #b57614, #fbf1c7, #b57614, #d79921, #fbf1c7
 rofi.color-urgent: #cc241d, #fbf1c7, #cc241d, #fb4934, #fbf1c7
-rofi.font: Inconsolata 19

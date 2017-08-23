@@ -3,8 +3,7 @@ let mapleader = "\<Space>" "leader to space
 "space-w saves
 nnoremap <Leader>w :w<CR> 
 " leader y/p to copy to clipboard
-nmap <Leader>p :set ft=php<CR>
-nmap <Leader>h :set ft=html<CR>
+nmap <Leader>h :Goyo<CR>
 "expand selected region on hitting v
 vmap v <Plug>(expand_region_expand)
 "reduce selected region on hitting c-v
@@ -34,12 +33,12 @@ vmap <silent> <expr> p <sid>Repl()
 nnoremap <Leader>fr :FZF<CR>
 nnoremap <Leader>fg :GFiles?<CR>
 nnoremap <Leader>fl :Lines<CR>
-nnoremap <Leader>ll :BLines<CR>
+nnoremap <Leader>Fl :BLines<CR>
 noremap <leader>bp :bp<CR>
 noremap <leader>bn :bn<CR>
 noremap <leader>bb :Buffers<CR>
 noremap <leader>bd :bd<CR>
-noremap <leader>ff :e
+noremap <leader>ff :e<Space>
 
 noremap <leader>] <C-]>
 noremap <leader>[ <C-t>

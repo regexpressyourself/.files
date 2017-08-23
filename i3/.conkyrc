@@ -37,23 +37,26 @@ TEXT
 
 
 [
-    {"full_text" : "${exec ~/scripts/player.sh}" ,
-     "color"     : "\#689d6a" 
-     },
-    {"full_text" : " ${battery_short BAT0}" ,
-     "color"     : "\#fb4934" 
-     },
-    {"full_text" : "${addr wlp3s0}" ,
-     "color"     :"\#b8bb26" 
-     },
-    {"full_text" : " ${memperc}%" ,
-     "color"     : ${if_match ${memperc}<90} "\#458588" ${else}"\#ff3232" ${endif} 
-     },
+{"full_text" : "${exec ~/scripts/player.sh}" ,
+    "color"     : "\#689d6a" 
+},
+{"full_text" : "${addr wlp3s0}" ,
+    "color"     :"\#b8bb26" 
+},
+{"full_text" : " ${memperc}%" ,
+    "color"     : ${if_match ${memperc}<90} "\#458588" ${else}"\#ff3232" ${endif} 
+},
 
-    {"full_text" : " ${exec amixer -c 0 get Master | grep Mono: | cut -d ' ' -f6}",
+{"full_text" : " ${exec amixer -c 0 get Master | grep Mono: | cut -d ' ' -f6}",
     "color"      : "\#d79921"
-    },
-    {"full_text" : " ${time %I:%M - %a %b %e}",
+},
+{
+    "full_text": " ${if_empty ${exec cat /sys/class/power_supply/BAT0/status | grep 'Discharging'}} $battery_percent% ${else} $battery_percent%${endif}${execi 200 ~/.i3/conky/info.py --battery}",
+     "color"     : "\#fb4934"
+},
+{"full_text" : " ${time %I:%M - %a %b %e}",
     "color" : "\#fbf1c7" 
-    }
+}
+
 ],
+
