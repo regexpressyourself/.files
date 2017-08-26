@@ -138,3 +138,5 @@ alias play="playerctl play"
 alias pause="playerctl pause"
 alias next="playerctl next"
 alias prev="playerctl prev"
+
+alias gc="sh ~/scripts/c_compiler.sh"
