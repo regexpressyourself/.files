@@ -43,3 +43,7 @@ noremap <leader>ff :e<Space>
 noremap <leader>] <C-]>
 noremap <leader>[ <C-t>
 noremap <leader>. :TagbarToggle<CR>
+
+noremap <leader>h :set ft=html<CR>
+noremap <leader>j :set ft=javascript<CR>
+

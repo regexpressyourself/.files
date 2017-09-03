@@ -1,39 +1,35 @@
 "Plugins-------------------------------------------------------------------
 call plug#begin()
-Plug 'morhetz/gruvbox'
-Plug 'w0rp/ale'
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
-Plug 'https://github.com/tpope/vim-commentary.git'
-Plug 'https://github.com/tpope/vim-endwise.git'
-Plug 'https://github.com/terryma/vim-multiple-cursors.git'
-Plug 'https://github.com/tpope/vim-repeat.git'
-Plug 'https://github.com/tpope/vim-sensible.git'
-Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'https://github.com/SirVer/ultisnips.git'
-Plug 'https://github.com/tpope/vim-unimpaired.git'
-Plug 'https://github.com/mxw/vim-jsx.git'
-Plug 'https://github.com/ervandew/supertab.git'
-Plug 'https://github.com/majutsushi/tagbar.git'
-Plug 'SirVer/ultisnips'
-Plug 'https://github.com/gabrielelana/vim-markdown.git'
-Plug 'honza/vim-snippets'
-Plug 'https://github.com/mxw/vim-jsx.git'
-Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/sjl/vitality.vim.git'
-"Plug 'pangloss/vim-javascript'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'honza/vim-snippets'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'airblade/vim-gitgutter'
-Plug 'iCyMind/NeoSolarized'
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'https://github.com/gcmt/taboo.vim.git'
 
+
+"Plug 'pangloss/vim-javascript'
+Plug 'MarcWeber/vim-addon-mw-utils.git'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips.git'
+Plug 'ervandew/supertab.git'
+Plug 'gabrielelana/vim-markdown.git'
+Plug 'gcmt/taboo.vim.git'
+Plug 'honza/vim-snippets'
+Plug 'iCyMind/NeoSolarized'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/goyo.vim'
+Plug 'majutsushi/tagbar.git'
+Plug 'morhetz/gruvbox'
+Plug 'mxw/vim-jsx.git'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'sjl/vitality.vim.git'
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'terryma/vim-multiple-cursors.git'
+Plug 'tpope/vim-commentary.git'
+Plug 'tpope/vim-endwise.git'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat.git'
+Plug 'tpope/vim-sensible.git'
+Plug 'tpope/vim-surround.git'
+Plug 'tpope/vim-unimpaired.git'
+Plug 'w0rp/ale'
 call plug#end()
 
 let g:jsx_ext_required = 0
