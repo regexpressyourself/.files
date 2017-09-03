@@ -7,8 +7,8 @@ function cCompiler {
   done
   for i in *.c
   do
-    echo "gcc -Wall $i -o ${i%.c}.out"
-    gcc -Wall "$i" -o "${i%.c}.out"
+    echo "gcc -Wall -std=gnu99 $i -o ${i%.c}.out"
+    gcc -Wall "$i" -std=gnu99 -o "${i%.c}.out"
   done
 }
 cCompiler;
