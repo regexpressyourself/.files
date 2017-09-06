@@ -42,5 +42,4 @@ set ttimeoutlen=50
 au FocusLost * :wa  " save file when alt-tabbing
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
-call deoplete#enable()
 set noshowmatch
