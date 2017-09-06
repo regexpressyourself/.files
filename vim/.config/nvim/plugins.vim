@@ -2,34 +2,45 @@
 call plug#begin()
 
 
-"Plug 'pangloss/vim-javascript'
-Plug 'MarcWeber/vim-addon-mw-utils.git'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips.git'
-Plug 'ervandew/supertab.git'
-Plug 'gabrielelana/vim-markdown.git'
-Plug 'gcmt/taboo.vim.git'
-Plug 'honza/vim-snippets'
-Plug 'iCyMind/NeoSolarized'
-Plug 'itchyny/lightline.vim'
+"Plug 'pangloss'
+Plug 'MarcWeber/vim-addon-mw-utils'
+
+" Tools
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/goyo.vim'
-Plug 'majutsushi/tagbar.git'
-Plug 'morhetz/gruvbox'
-Plug 'mxw/vim-jsx.git'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'sjl/vitality.vim.git'
+
+" Auto Complete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'epilande/vim-react-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
+Plug 'honza/vim-snippets'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'terryma/vim-multiple-cursors.git'
-Plug 'tpope/vim-commentary.git'
-Plug 'tpope/vim-endwise.git'
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+
+" Helpers
+Plug 'https://www.github.com/tpope/vim-sensible'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat.git'
-Plug 'tpope/vim-sensible.git'
-Plug 'tpope/vim-surround.git'
-Plug 'tpope/vim-unimpaired.git'
+Plug 'tpope/vim-repeat'
+
+" Syntax
 Plug 'w0rp/ale'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'gabrielelana/vim-markdown'
+
+" Visual
+Plug 'gcmt/taboo.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'iCyMind/NeoSolarized'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 let g:jsx_ext_required = 0

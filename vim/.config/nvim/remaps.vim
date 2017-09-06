@@ -47,3 +47,10 @@ noremap <leader>. :TagbarToggle<CR>
 noremap <leader>h :set ft=html<CR>
 noremap <leader>j :set ft=javascript<CR>
 
+if exists(":Tabularize")
+    nmap <Leader>t= :Tabularize /=<CR>
+    vmap <Leader>t= :Tabularize /=<CR>
+    nmap <Leader>t: :Tabularize /:\zs<CR>
+    vmap <Leader>t: :Tabularize /:\zs<CR>
+endif
+
