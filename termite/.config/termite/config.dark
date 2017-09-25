@@ -7,7 +7,7 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Inconsolata 16
+font = Inconsolata 18
 scrollback_lines = 10000
 search_wrap = true
 #icon_name = terminal
@@ -33,10 +33,18 @@ filter_unmatched_urls = true
 
 [colors]
 # hard contrast: background = #1d2021
-background = #282828
+#background = #282828
+# soft contrast: background = #32302f
+#foreground = #ebdbb2
+#foreground_bold = #ebdbb2
+
+
+[colors]
+# hard contrast: background = #1d2021
+#background = #282828
 # soft contrast: background = #32302f
 foreground = #ebdbb2
-foreground_bold = #ebdbb2
+#foreground_bold = #ebdbb2
 
 # dark0 + gray
 color0 = #282828
@@ -70,7 +78,6 @@ color14 = #8ec07c
 color7 = #a89984
 color15 = #ebdbb2
 
-# vim: ft=dosini cms=#%s
 [hints]
 #foreground = #dcdccc
 #background = #3f3f3f
