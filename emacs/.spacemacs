@@ -131,6 +131,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         sanityinc-tomorrow-day
                          zenburn
                          sanityinc-solarized-light
 
@@ -371,7 +372,6 @@ layers configuration. You are free to put any user code."
    [default bold shadow italic underline bold bold-italic bold])
  '(evil-want-Y-yank-to-eol t)
  '(fci-rule-color "#383838" t)
- '(hl-sexp-background-color "#1c1f26")
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
@@ -402,9 +402,9 @@ layers configuration. You are free to put any user code."
      (340 . "#94BFF3")
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
-(custom-set-faces
+;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "#DCDCCC" :background "#3F3F3F")))))
+ ;'(default ((t (:foreground "#DCDCCC" :background "#3F3F3F")))))
