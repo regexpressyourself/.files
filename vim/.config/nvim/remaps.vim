@@ -45,12 +45,26 @@ noremap <leader>[ <C-t>
 noremap <leader>. :TagbarToggle<CR>
 
 noremap <leader>h :set ft=html<CR>
-noremap <leader>j :set ft=javascript<CR>
-
+noremap <leader>j :set ft=javascript.jsx<CR>
 if exists(":Tabularize")
-    nmap <Leader>t= :Tabularize /=<CR>
-    vmap <Leader>t= :Tabularize /=<CR>
-    nmap <Leader>t: :Tabularize /:\zs<CR>
-    vmap <Leader>t: :Tabularize /:\zs<CR>
+  nmap <Leader>tt :Tabularize /
 endif
 
+
+" Usage:
+"   fzf#wrap([name string,] [opts dict,] [fullscreen boolean])
+
+" This command now supports CTRL-T, CTRL-V, and CTRL-X key bindings
+" and opens fzf according to g:fzf_layout setting.
+command! Buffers call fzf#run(fzf#wrap(
+    \ {'source': map(range(1, bufnr('$')), 'bufname(v:val)')}))
+
+" This extends the above example to open fzf in fullscreen
+" when the command is run with ! suffix (Buffers!)
+command! -bang Buffers call fzf#run(fzf#wrap(
+    \ {'source': map(range(1, bufnr('$')), 'bufname(v:val)')}, <bang>0))
+
+" You can optionally pass the name of the command as the first argument to
+" fzf#wrap to make it work with g:fzf_history_dir
+command! -bang Buffers call fzf#run(fzf#wrap('buffers',
+    \ {'source': map(range(1, bufnr('$')), 'bufname(v:val)')}, <bang>0))

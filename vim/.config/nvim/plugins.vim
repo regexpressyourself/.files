@@ -18,14 +18,13 @@ Plug 'honza/vim-snippets'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-
+Plug 'scrooloose/nerdcommenter'
 " Helpers
 Plug 'https://www.github.com/tpope/vim-sensible'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'godlygeek/tabular'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -37,6 +36,7 @@ Plug 'mxw/vim-jsx'
 Plug 'gabrielelana/vim-markdown'
 
 " Visual
+Plug 'mhartington/oceanic-next'
 Plug 'gcmt/taboo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'iCyMind/NeoSolarized'
