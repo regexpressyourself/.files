@@ -116,14 +116,13 @@ alias mu="cd /var/www/html/macupdate.com"
 
 alias emacs="Emacs -nw"
 
-alias of="vim \$(fzf --height 40% --reverse --border)"
+alias of="vim \$(fzf --reverse --border)"
 alias od="cd \$(dirname \$(fzf --height 40% --reverse --border))"
 alias fzf="fzf --height 40% --reverse --border"
 
 alias tmu="bash ~/scripts/tail_error.sh"
 eval $( dircolors -b $HOME/.dir_colors ) 
 
-alias cal='khal interactive'
 
 
 # basic utils
@@ -141,3 +140,5 @@ alias next="playerctl next"
 alias prev="playerctl prev"
 
 alias gc="sh ~/scripts/c_compiler.sh"
+
+alias m="make"
