@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xdg-open https://developer.mozilla.org/en-US/search?q=$1&topic=js
+
