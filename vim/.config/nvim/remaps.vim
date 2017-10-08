@@ -46,8 +46,13 @@ noremap <leader>. :TagbarToggle<CR>
 
 noremap <leader>h :set ft=html<CR>
 noremap <leader>j :set ft=javascript.jsx<CR>
+
+autocmd FileType css set keywordprg=~/scripts/cssman
+autocmd FileType js set keywordprg=~/scripts/jsman
+autocmd FileType jsx set keywordprg=~/scripts/jsman
+
 if exists(":Tabularize")
-  nmap <Leader>tt :Tabularize /
+  nmap <Leader>T :Tabularize /
 endif
 
 
@@ -68,3 +73,8 @@ command! -bang Buffers call fzf#run(fzf#wrap(
 " fzf#wrap to make it work with g:fzf_history_dir
 command! -bang Buffers call fzf#run(fzf#wrap('buffers',
     \ {'source': map(range(1, bufnr('$')), 'bufname(v:val)')}, <bang>0))
+
+
+
+
+

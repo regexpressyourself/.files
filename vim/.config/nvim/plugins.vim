@@ -31,8 +31,7 @@ Plug 'tpope/vim-repeat'
 
 " Syntax
 Plug 'w0rp/ale'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+"Plug 'pangloss/vim-javascript'
 Plug 'gabrielelana/vim-markdown'
 
 " Visual
