@@ -142,3 +142,5 @@ alias prev="playerctl prev"
 alias gc="sh ~/scripts/c_compiler.sh"
 
 alias m="make"
+
+alias open407="bash ~/scripts/show-server.sh && bash ~/scripts/show-client.sh"
