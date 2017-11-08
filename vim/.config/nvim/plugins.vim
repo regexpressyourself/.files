@@ -7,6 +7,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 
 " Tools
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Auto Complete
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

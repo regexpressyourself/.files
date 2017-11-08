@@ -69,12 +69,16 @@ command! Buffers call fzf#run(fzf#wrap(
 command! -bang Buffers call fzf#run(fzf#wrap(
     \ {'source': map(range(1, bufnr('$')), 'bufname(v:val)')}, <bang>0))
 
-" You can optionally pass the name of the command as the first argument to
-" fzf#wrap to make it work with g:fzf_history_dir
-command! -bang Buffers call fzf#run(fzf#wrap('buffers',
-    \ {'source': map(range(1, bufnr('$')), 'bufname(v:val)')}, <bang>0))
-
-
-
-
-
+" --column: Show column number
+" --line-number: Show line number
+" --no-heading: Do not show file headings in results
+" --fixed-strings: Search term as a literal string
+" --ignore-case: Case insensitive search
+" --no-ignore: Do not respect .gitignore, etc...
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+" --color: Search color options
+"
+set grepprg=rg\ --vimgrep
+command! -bang -nargs=* Find call fzf#vim#grep('rg -lr --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" "node_modules" --color "always" '.shellescape(<q-args>), 1, <bang>0)
