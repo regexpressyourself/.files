@@ -83,7 +83,7 @@ alias school="cd ~/documents/school/Fall2017"
 alias 407="cd ~/documents/school/Fall2017/407"
 alias 437="cd ~/documents/school/Fall2017/437"
 alias 498="cd ~/documents/school/Fall2017/SeniorProject"
-alias phls="cd ~/documents/school/Fall2017/PHLS"
+alias phsl="cd ~/documents/school/Fall2017/PHSL"
 alias pols="cd ~/documents/school/Fall2017/POLS"
 
 # TaskWarrior

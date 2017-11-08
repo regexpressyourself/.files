@@ -9,14 +9,14 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Auto Complete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'epilande/vim-react-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'honza/vim-snippets'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+"Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'scrooloose/nerdcommenter'
 " Helpers
@@ -32,9 +32,11 @@ Plug 'tpope/vim-repeat'
 " Syntax
 Plug 'w0rp/ale'
 "Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'gabrielelana/vim-markdown'
 
 " Visual
+Plug 'mhinz/vim-startify'
 Plug 'mhartington/oceanic-next'
 Plug 'gcmt/taboo.vim'
 Plug 'itchyny/lightline.vim'
@@ -44,4 +46,4 @@ call plug#end()
 
 let g:jsx_ext_required = 0
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1

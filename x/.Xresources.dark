@@ -8,7 +8,7 @@ URxvt.saveLines:        5120
 URxvt.multichar_encoding: utf-8
 URxvt.mapAlert:         true
 URxvt.visualBell:       true
-URxvt.urlLauncher:      chromium
+URxvt.urlLauncher:      firerfox-developer
 URxvt.matcher.button:   1
 !URxvt.transparent:      true
 URxvt.perl-ext-common:  default,matcher,-option-popup,-selection-popup,-readline,config-reload
