@@ -8,4 +8,8 @@ set background=light "light | dark"
 "colorscheme jellybeans
 "colorscheme gruvbox
 colorscheme solarized
+"colorscheme deus
 " colorscheme OceanicNext
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }

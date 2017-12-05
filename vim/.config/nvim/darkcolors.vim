@@ -4,12 +4,13 @@ set background=dark "light | dark"
 "set background=light
 "colorscheme zenburn
 "colorscheme jellybeans
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme deus
+"colorscheme onedark
 "colorscheme solarized
 
 
 set background=dark
-colorscheme gruvbox
 hi vertsplit ctermfg=238 ctermbg=235
 hi LineNr ctermfg=237
 hi StatusLine ctermfg=235 ctermbg=245

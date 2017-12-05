@@ -40,7 +40,6 @@ set wildmode=list:longest " complimentary with above
 set visualbell      " baby got beep
 set ttimeoutlen=50
 set foldmethod=indent
-au FocusLost * :wa  " save file when alt-tabbing
+au FocusLost * silent! wa  " save file when alt-tabbing
 
-let g:SuperTabDefaultCompletionType = "<c-n>"
 set noshowmatch
