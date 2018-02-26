@@ -225,12 +225,11 @@ bar {
     font pango:Inconsolata 14
 #    font -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
     colors {
-        background #151515
-        statusline #808080
-        focused_workspace #151515 #151515 #D7D7D7
-        inactive_workspace #1C1C1C #1C1C1C #777777
-        active_workspace #808080 #151515
-        urgent_workspace #2e3436 #9a878f
+            background #fdf6e3
+            statusline #eee8d5
+            focused_workspace #268bd2 #268bd2 #002b36
+            active_workspace #cb4b16 #cb4b16 #002b36
+inactive_workspace #fdf6e3 #fdf6e3 #002b36
     }
 }
 

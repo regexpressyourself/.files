@@ -16,6 +16,8 @@ Plug 'honza/vim-snippets'
 Plug 'maksimr/vim-jsbeautify'
 
 " Helpers
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'haya14busa/incsearch.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -25,6 +27,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
 " Syntax
+Plug 'leafgarland/typescript-vim'
+Plug 'quramy/tsuquyomi'
 Plug 'w0rp/ale'
 Plug 'epilande/vim-react-snippets'
 Plug 'pangloss/vim-javascript'
@@ -43,5 +47,9 @@ call plug#end()
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+let g:ale_fixers = {
+\   'typescript': ['tslint'],
+\}
 
 let g:jsx_ext_required = 0

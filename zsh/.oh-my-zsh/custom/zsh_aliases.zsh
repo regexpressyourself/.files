@@ -70,7 +70,7 @@ alias tls="tmux ls"
 alias td="tmux detach"
 alias tatt="tmux attach-session -t "
 function new-tmux-from-dir-name {
-tmux new-session -As `basename $PWD`
+tmux new-session -As `basename $PWD` 
 }
 alias tnew="new-tmux-from-dir-name"
 
@@ -79,12 +79,11 @@ alias ls='ls --color'
 
 
 
-alias school="cd ~/documents/school/Fall2017"
-alias 407="cd ~/documents/school/Fall2017/407"
-alias 437="cd ~/documents/school/Fall2017/437"
-alias 498="cd ~/documents/school/Fall2017/SeniorProject"
-alias phsl="cd ~/documents/school/Fall2017/PHSL"
-alias pols="cd ~/documents/school/Fall2017/POLS"
+alias school="cd ~/documents/school/Spring2018"
+alias 491="cd ~/documents/school/Spring2018/491"
+alias 499="cd ~/documents/school/Spring2018/499"
+alias typo="cd ~/documents/school/Spring2018/typo"
+alias jrnl="cd ~/documents/school/Spring2018/jrnl"
 
 # TaskWarrior
 alias tasks="task list && task calendar"
@@ -144,3 +143,5 @@ alias gc="sh ~/scripts/c_compiler.sh"
 alias m="make"
 
 alias open407="bash ~/scripts/show-server.sh && bash ~/scripts/show-client.sh"
+
+
