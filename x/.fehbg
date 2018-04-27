@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-fill' '/home/zookeeprr/pictures/wallpapers/colors.png' 
+'feh' '--bg-fill' './pictures/wallpapers/cards/vim.png' 
