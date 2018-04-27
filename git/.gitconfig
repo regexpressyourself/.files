@@ -2,7 +2,7 @@
   name = Sam Messina
   email = samuel.messina@gmail.com
 [core]
-  editor = vim
+  editor = nvim
   pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
   co = checkout
