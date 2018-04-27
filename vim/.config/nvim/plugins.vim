@@ -14,6 +14,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'maksimr/vim-jsbeautify'
+Plug 'Chiel92/vim-autoformat'
 
 " Helpers
 Plug 'yuttie/comfortable-motion.vim'
@@ -28,7 +29,6 @@ Plug 'tpope/vim-repeat'
 
 " Syntax
 Plug 'leafgarland/typescript-vim'
-Plug 'quramy/tsuquyomi'
 Plug 'w0rp/ale'
 Plug 'epilande/vim-react-snippets'
 Plug 'pangloss/vim-javascript'
