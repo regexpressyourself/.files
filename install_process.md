@@ -1,6 +1,6 @@
+sudo pacman -S curl vim i3 stow tmux zsh termite chromium rofi conky feh gedit firefox gthumb vlc nautilus emacs neovim npm node &&
 git clone https://www.github.com/regexpressyourself/.files.git ~/dotfiles &&
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&
-sudo pacman -S vim i3 stow tmux zsh termite chromium rofi conky feh gedit firefox gthumb vlc nautilus emacs neovim npm node &&
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d &&
 mkdir ~/aur &&
 cd ~/aur &&
@@ -26,4 +26,5 @@ stow tmux  &&
 stow vim  &&
 stow x  &&
 stow zsh &&
+stow pics
 
