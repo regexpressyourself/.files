@@ -1,6 +1,6 @@
 "Plugins-------------------------------------------------------------------
 call plug#begin()
-
+"Plug 'skywind3000/vim-keysound'
 "Plug 'pangloss'
 
 " Tools
@@ -53,3 +53,4 @@ let g:ale_fixers = {
 \}
 
 let g:jsx_ext_required = 0
+"let g:keysound_enable = 1
