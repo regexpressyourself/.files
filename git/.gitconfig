@@ -4,10 +4,12 @@
 [core]
   editor = nvim
   pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /Users/topsteptrader/.gitignore_global
 [alias]
   co = checkout
   ci = commit
   st = status
+  diff = diff -- . ':(exclude)*.min.css' ':(exclude)*.min.css.map' ':(exclude)*.min.js' ':(exclude)*.min.js.map'
   br = branch
   hist = log --graph --decorate --pretty=oneline --abbrev-commit
   type = cat-file -t
@@ -22,3 +24,11 @@
   newHighlight = green bold 22
 [init]
 	templatedir = ~/.git_template
+[commit]
+	template = /Users/topsteptrader/.gittemplate
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

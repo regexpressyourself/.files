@@ -1,4 +1,4 @@
-sudo pacman -S curl vim i3 stow tmux zsh termite chromium rofi conky feh gedit firefox gthumb vlc nautilus emacs neovim npm node &&
+brew cask install tmux zsh conky gedit gthumb vlc emacs neovim npm node 
 git clone https://www.github.com/regexpressyourself/.files.git ~/dotfiles &&
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d &&
