@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/zookeeprr/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -88,3 +88,38 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+#echo "              _"
+#echo "             | |"
+#echo "             | |===( )   //////"
+#echo "             |_|   |||  | o o|"
+#echo "                    ||| ( c  )                  ____"
+#echo "                     ||| \\= /                  ||   \\_"
+#echo "                      ||||||                   ||     |"
+#echo "                      ||||||                ...||__/|-'"
+#echo "                      ||||||             __|________|__"
+#echo "                        |||             |______________|"
+#echo "                        |||             || ||      || ||"
+#echo "                        |||             || ||      || ||"
+#echo "------------------------|||-------------||-||------||-||-------"
+#echo "                        |__>            || ||      || ||"
+
+
+echo "   _______________                        |*\\_/*|________"
+echo "  |  ___________  |     .-.     .-.      ||_/-\\_|______  |"
+echo "  | |           | |    .****. .****.     | |           | |"
+echo "  | |   0   0   | |    .*****.*****.     | |   0   0   | |"
+echo "  | |     -     | |     .*********.      | |     -     | |"
+echo "  | |   \\___/   | |      .*******.       | |   \\___/   | |"
+echo "  | |___     ___| |       .*****.        | |___________| |"
+echo "  |_____|\\_/|_____|        .***.         |_______________|"
+echo "    _|__|/ \\|_|_.............*.............._|________|_"
+echo "   / ********** \\                          / ********** \\"
+echo " /  ************  \\                      /  ************  \\"
+echo "--------------------                    --------------------"
+

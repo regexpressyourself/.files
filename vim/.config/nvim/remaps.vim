@@ -27,6 +27,9 @@ inoremap <leader>tp <Esc>:tabprevious<CR>i
 inoremap <leader>tn <Esc>:tabnext<CR>i
 inoremap <leader>tt <Esc>:tabnew<CR>
 
+nnoremap <leader>= gg=Gg;<CR>
+nnoremap <leader>y ggyGg;<CR>
+
 vmap <silent> <expr> p <sid>Repl()
 
 
@@ -87,3 +90,4 @@ map g# <Plug>(incsearch-nohl-g#)
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+

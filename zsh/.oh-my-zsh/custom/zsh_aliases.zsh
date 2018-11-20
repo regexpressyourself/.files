@@ -75,7 +75,6 @@ tmux new-session -As `basename $PWD`
 alias tnew="new-tmux-from-dir-name"
 
 alias dir='dir --color'
-alias ls='ls --color' 
 
 
 
@@ -120,7 +119,6 @@ alias od="cd \$(dirname \$(fzf --height 40% --reverse --border))"
 alias fzf="fzf --height 40% --reverse --border"
 
 alias tmu="bash ~/scripts/tail_error.sh"
-eval $( dircolors -b $HOME/.dir_colors ) 
 
 
 
@@ -144,4 +142,4 @@ alias m="make"
 
 alias open407="bash ~/scripts/show-server.sh && bash ~/scripts/show-client.sh"
 
-
+alias li="lorem-ipsum 1 paragraphs --copy"
