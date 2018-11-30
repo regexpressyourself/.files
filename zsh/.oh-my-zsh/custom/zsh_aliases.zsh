@@ -96,11 +96,11 @@ alias pdf="apvlv"
 alias emacz="emacsclient -c"
 alias idea="~/aur/idea-IC-143.382.35/bin/idea.sh"
 alias kde="~/config/kde.sh"
-alias i3="~/config/i3.sh"
+#alias i3="~/config/i3.sh"
 
 alias mongod="mongod --storageEngine=mmapv1 --dbpath ~/documents/mongodata"
 
-alias sm="sh ~/scripts/monitoron.sh"
+alias sm="sh ~/scripts/sm.sh"
 alias ms="sh ~/scripts/monitoroff.sh"
 
 alias findfile="find . -name "

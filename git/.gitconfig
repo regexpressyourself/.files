@@ -1,6 +1,6 @@
 [user]
-  name = Sam Messina
-	email = sam@smessina.com
+	name = Sam
+	email = samuel.messina@siu.edu
 [core]
   editor = nvim
   pager = diff-so-fancy | less --tabs=4 -RFX

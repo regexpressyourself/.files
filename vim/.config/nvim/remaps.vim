@@ -1,4 +1,5 @@
 
+
 let mapleader = "\<Space>" "leader to space
 "space-w saves
 nnoremap <Leader>w :w<CR> 
@@ -26,6 +27,9 @@ nnoremap <leader>tt :tabnew<CR>
 inoremap <leader>tp <Esc>:tabprevious<CR>i
 inoremap <leader>tn <Esc>:tabnext<CR>i
 inoremap <leader>tt <Esc>:tabnew<CR>
+
+nnoremap <leader>= gg=Gg;<CR>
+nnoremap <leader>y ggyGg;<CR>
 
 vmap <silent> <expr> p <sid>Repl()
 
@@ -87,3 +91,10 @@ map g# <Plug>(incsearch-nohl-g#)
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+
+autocmd FileType javascript nnoremap <leader>bf :%!js-beautify -f -<CR>
+autocmd FileType css nnoremap <leader>bf :%!js-beautify --type css -f -<CR>
+autocmd FileType scss nnoremap <leader>bf :%!js-beautify --type css -f -<CR>
+autocmd FileType html nnoremap <leader>bf :%!js-beautify --type html -f -<CR>
+
