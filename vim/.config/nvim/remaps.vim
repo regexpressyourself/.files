@@ -1,7 +1,7 @@
 
 let mapleader = "\<Space>" "leader to space
 "space-w saves
-nnoremap <Leader>w :w<CR> 
+nnoremap <Leader>w :w<CR>
 " leader y/p to copy to clipboard
 nmap <Leader>h :Goyo<CR>
 "expand selected region on hitting v
@@ -35,7 +35,7 @@ vmap <silent> <expr> p <sid>Repl()
 
 nnoremap <Leader>fr :FZF<CR>
 nnoremap <Leader>fg :GFiles?<CR>
-nnoremap <Leader>fl :Lines<CR>
+nnoremap <Leader>/ :Lines<CR>
 nnoremap <Leader>Fl :BLines<CR>
 noremap <leader>bp :bp<CR>
 noremap <leader>bn :bn<CR>
@@ -53,6 +53,7 @@ noremap <leader>j :set ft=javascript.jsx<CR>
 autocmd FileType css set keywordprg=~/scripts/cssman
 autocmd FileType js set keywordprg=~/scripts/jsman
 autocmd FileType jsx set keywordprg=~/scripts/jsman
+autocmd FileType mjml set keywordprg=~/scripts/mjmlman
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -92,7 +93,27 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 
-autocmd FileType javascript nnoremap <leader>bf :%!js-beautify -f -<CR>
-autocmd FileType css nnoremap <leader>bf :%!js-beautify --type css -f -<CR>
-autocmd FileType scss nnoremap <leader>bf :%!js-beautify --type css -f -<CR>
-autocmd FileType html nnoremap <leader>bf :%!js-beautify --type html -f -<CR>
+"autocmd FileType javascript nnoremap <leader>bf :%!js-beautify -f -<CR>
+"autocmd FileType css nnoremap <leader>bf :%!js-beautify --type css -f -<CR>
+"autocmd FileType scss nnoremap <leader>bf :%!js-beautify --type css -f -<CR>
+"autocmd FileType html nnoremap <leader>bf :%!js-beautify --type html -f -<CR>
+".vimrc
+map <leader>bf :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <leader>bf :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <leader>bf :call JsonBeautify()<cr>
+" for jsx
+autocmd FileType jsx noremap <buffer> <leader>bf :call JsxBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <leader>bf :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <leader>bf :call CSSBeautify()<cr>
+autocmd FileType scss noremap <buffer> <leader>bf :call CSSBeautify()<cr>
+
+
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>al :Ack! -l<Space>
+
+nnoremap <Leader>bc V:!bc -l<cr>
