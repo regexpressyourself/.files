@@ -7,8 +7,9 @@ set t_Co=256       " use 256 color terminal
 "colorscheme zenburn
 "colorscheme jellybeans
 "colorscheme gruvbox
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
+"colorscheme solarized
+color dracula
 "colorscheme deus
 " colorscheme OceanicNext
 let g:lightline = {

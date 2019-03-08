@@ -70,7 +70,7 @@ alias tls="tmux ls"
 alias td="tmux detach"
 alias tatt="tmux attach-session -t "
 function new-tmux-from-dir-name {
-tmux new-session -As `basename $PWD` 
+tmux new-session -As `basename $PWD`
 }
 alias tnew="new-tmux-from-dir-name"
 
@@ -143,3 +143,10 @@ alias m="make"
 alias open407="bash ~/scripts/show-server.sh && bash ~/scripts/show-client.sh"
 
 alias li="lorem-ipsum 1 paragraphs --copy"
+
+alias sg="sh ~/scripts/samsgrep.sh"
+alias sgl="sh ~/scripts/samsgrep-lines.sh"
+
+alias bc="bc -l"
+
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app &"

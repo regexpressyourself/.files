@@ -8,3 +8,9 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 "PHP & HTML
 au BufNewFile *.php set ft=php.html
 
+au BufNewFile *.mustache set ft=html
+
+au BufRead,BufNewFile *.mustache setfiletype html
+
+
+

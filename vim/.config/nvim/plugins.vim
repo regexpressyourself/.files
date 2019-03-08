@@ -2,15 +2,24 @@
 call plug#begin()
 "Plug 'skywind3000/vim-keysound'
 "Plug 'pangloss'
-
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " Tools
 Plug 'ap/vim-css-color'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'zeekay/vim-beautify'
+Plug 'vimwiki/vimwiki'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'mileszs/ack.vim'
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Auto Complete
 if has('nvim')
@@ -28,15 +37,16 @@ Plug 'kristijanhusak/deoplete-phpactor'
 Plug 'zchee/deoplete-zsh'
 Plug 'wellle/tmux-complete.vim'
 Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+"Plug 'Shougo/neosnippet-snippets'
 let g:deoplete#enable_at_startup = 1
 let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='~/.config/nvim/plugged/vim-snippets/snippets'
 Plug 'honza/vim-snippets'
+let g:neosnippet#snippets_directory='~/.config/nvim/plugged/vim-snippets/snippets'
 
 " Helpers
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -47,6 +57,7 @@ Plug 'tpope/vim-repeat'
 
 " Syntax
 Plug 'leafgarland/typescript-vim'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'w0rp/ale'
 Plug 'epilande/vim-react-snippets'
 Plug 'pangloss/vim-javascript'
@@ -84,14 +95,16 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <expr><TAB>
- \ pumvisible() ? "\<C-n>" :
- \ neosnippet#expandable_or_jumpable() ?
- \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+"imap <expr><TAB>
+ "\ pumvisible() ? "\<C-n>" :
+ "\ neosnippet#expandable_or_jumpable() ?
+ "\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 "smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
-  set conceallevel=2 concealcursor=niv
+  set conceallevel=0 concealcursor=niv
 endif
+
+let g:strip_whitespace_on_save=1
