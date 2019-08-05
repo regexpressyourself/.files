@@ -5,8 +5,8 @@ set background=dark "light | dark"
 "colorscheme zenburn
 "colorscheme jellybeans
 "colorscheme gruvbox
-colorscheme deus
-"colorscheme onedark
+" colorscheme deus
+colorscheme dracula
 "colorscheme solarized
 
 
@@ -26,6 +26,6 @@ hi GitGutterChangeDelete ctermbg=235 ctermfg=245
 hi EndOfBuffer ctermfg=237 ctermbg=235
 
 set statusline=%=&P\ %f\ %m
-set fillchars=vert:\ ,stl:\ ,stlnc:\ 
+set fillchars=vert:\ ,stl:\ ,stlnc:\
 set laststatus=2
 set noshowmode

@@ -17,7 +17,7 @@ short_units yes
 # How strict should if_up be when testing an interface for being up?
 # The value is one of up, link or address, to check for the interface
 # being solely up, being up and having link or being up, having link
-# and an assigned IP address. 
+# and an assigned IP address.
 if_up_strictness address
 
 # Add spaces to keep things from moving about?  This only affects certain
@@ -38,27 +38,27 @@ TEXT
 
 [
 {"full_text" : "${exec ~/scripts/player.sh}" ,
-    "color"     : "\#859900" 
+    "color"     : "\#859900"
 },
 {"full_text" : " ${addr wlp3s0}" ,
-    "color"     :"\#2aa198" 
+    "color"     :"\#2aa198"
 },
 {"full_text" : " ${memperc}%" ,
-    "color"     : ${if_match ${memperc}<90} "\#6c71c4" ${else}"\#ff3232" ${endif} 
+    "color"     : ${if_match ${memperc}<90} "\#6c71c4" ${else}"\#ff3232" ${endif}
 },
 {"full_text" : " $cpu%" ,
-    "color"     : ${if_match ${memperc}<90} "\#d33682" ${else}"\#ff3232" ${endif} 
+    "color"     : ${if_match ${memperc}<90} "\#d33682" ${else}"\#ff3232" ${endif}
 },
 
 {"full_text" : " ${exec amixer -c 0 get Master | grep Mono: | cut -d ' ' -f6}",
     "color"      : "\#d79921"
 },
 {
-    "full_text": " ${if_empty ${exec cat /sys/class/power_supply/BAT0/status | grep 'Discharging'}} $battery_percent%${else} $battery_percent%${endif}${execi 200 ~/.i3/conky/info.py --battery}",
+    "full_text": "${if_empty ${exec cat /sys/class/power_supply/BAT0/status | grep 'Discharging'}}$battery_percent%${else} $battery_percent%${endif}${execi 200 ~/.i3/conky/info.py --battery}",
      "color"     : "\#cb4b16"
 },
 {"full_text" : " ${time %I:%M - %a %b %e}",
-    "color" : "\#002b36" 
+    "color" : "\#002b36"
 }
 
 ],

@@ -13,6 +13,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'zeekay/vim-beautify'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Auto Complete
 if has('nvim')
@@ -59,6 +62,7 @@ Plug 'amadeus/vim-mjml'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Visual
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'mhartington/oceanic-next'
 Plug 'gcmt/taboo.vim'
 Plug 'itchyny/lightline.vim'
@@ -97,3 +101,9 @@ imap <expr><TAB>
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
+let g:easy_align_delimiters = {
+\ '/': { 'pattern': '//\+', 'delimiter_align': 'l', 'ignore_groups': ['!Comment'] }
+\ }

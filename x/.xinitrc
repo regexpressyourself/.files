@@ -7,6 +7,7 @@ alsactl init
 xmodmap ~/.Xmodmap
 export BROWSER=firefox
 exec i3
+#exec gnome-session
 
 nm-applet
 xrandr --dpi 125.37
