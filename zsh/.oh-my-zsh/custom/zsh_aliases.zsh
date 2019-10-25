@@ -101,8 +101,9 @@ alias kde="~/config/kde.sh"
 alias mongod="mongod --storageEngine=mmapv1 --dbpath ~/documents/mongodata"
 
 alias sm="sh ~/scripts/sm.sh"
-alias smt="sh ~/scripts/sm-new.sh"
-alias ms="sh ~/scripts/monitoroff.sh"
+alias smt="sh ~/scripts/smt.sh"
+alias ms="sh ~/scripts/ms.sh"
+alias st="sh ~/scripts/st.sh"
 
 alias findfile="find . -name "
 

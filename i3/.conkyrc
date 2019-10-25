@@ -58,7 +58,7 @@ TEXT
      "color"     : "\#cb4b16"
 },
 {"full_text" : " ${time %I:%M - %a %b %e}",
-    "color" : "\#002b36"
+    "color" : "\#f8f8f2"
 }
 
 ],

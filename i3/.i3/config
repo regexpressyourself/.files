@@ -57,7 +57,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run -display-run "Run" -lines 5 -width 100 -padding 150 -fullscreen -font "Inconsolata 50" -separator-style "none" -matching fuzzy 
+bindsym $mod+d exec rofi -show run -display-run "Run" -lines 5 -width 100 -padding 150 -fullscreen -font "Inconsolata 50" -separator-style "none" -matching fuzzy
 
 # There also is the (snew) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -217,6 +217,15 @@ client.unfocused        #402e2e #402e2e #978965
 client.focused_inactive #402e2e #402e2e #978965
 client.urgent           #402e2e #402e2e #978965
 
+set_from_resource   $fnt1 i3.fntpri System San Francisco Display
+set_from_resource   $fnt2 i3.fntsec FontAwesome
+set_from_resource   $fntsz i3.fntsz 8
+set_from_resource   $bg i3.bgrnd #282A36    # background
+set_from_resource   $fg i3.fgrnd #FFFFFF    # foreground
+set_from_resource   $in i3.inact #676E7D    # inactive
+set_from_resource   $ur i3.urgen #E53935    # urgent
+set_from_resource   $tr i3.trans FF         # transparency
+
 bar {
     status_command ~/.i3/conky-i3bar
     mode dock
@@ -224,13 +233,28 @@ bar {
     workspace_buttons yes
     font pango:Inconsolata 14
 #    font -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
-    colors {
-            background #fdf6e3
-            statusline #eee8d5
-            focused_workspace #268bd2 #268bd2 #002b36
-            active_workspace #cb4b16 #cb4b16 #002b36
-inactive_workspace #fdf6e3 #fdf6e3 #002b36
+#
+   colors{
+        background #282a36
+        statusline #DCDCDC
+	focused_workspace  #bd93f9 #44475a #DCDCDC
+        active_workspace   #bd93f9 #002b36 #DCDCDC
+        inactive_workspace #282a36 #021215 #586e75
+        urgent_workspace   #cb4b16 #dc322f #fdf6e
     }
+    #colors {
+  #background  $bg$tr
+        #separator   $in
+        ##                  border   bground   text
+        #focused_workspace  $bg$tr   $bg$tr    $fg
+        #inactive_workspace $bg$tr   $bg$tr    $in
+        #urgent_workspace   $bg$tr   $bg$tr    $ur
+            #background #282a36
+            #statusline #eee8d5
+            #focused_workspace #268bd2 #268bd2 #002b36
+            #active_workspace #cb4b16 #cb4b16 #002b36
+#inactive_workspace #fdf6e3 #fdf6e3 #002b36
+    #}
 }
 
 set $Locker i3lock-fancy
@@ -242,7 +266,7 @@ mode "$mode_system" {
   bindsym s exec --no-startup-id systemctl suspend && $Locker, mode "default"
   bindsym h exec --no-startup-id systemctl hibernate && $Locker, mode "default"
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
-  bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+  bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
   # back to normal: Enter or Escape
   bindsym Return mode "default"
@@ -252,11 +276,11 @@ mode "$mode_system" {
 bindsym $mod+q mode "$mode_system"
 
 #Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # mute sound
 
 # toggle touchpad

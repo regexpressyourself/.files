@@ -14,7 +14,7 @@ filetype plugin on
 " Basics
 filetype on
 syntax enable
-syntax on 
+syntax on
 set clipboard=unnamedplus
 set autowriteall
 set autowrite
@@ -39,7 +39,7 @@ set wildmenu        " command line auto-completion
 set wildmode=list:longest " complimentary with above
 set visualbell      " baby got beep
 set ttimeoutlen=50
-set foldmethod=indent
+"set foldmethod=indent
 au FocusLost * silent! wa  " save file when alt-tabbing
 
 set noshowmatch
