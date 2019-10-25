@@ -6,7 +6,7 @@ set t_Co=256       " use 256 color terminal
 "set background=light
 "colorscheme zenburn
 "colorscheme jellybeans
-"colorscheme gruvbox
+" colorscheme gruvbox
 "let g:solarized_termcolors=256
 "colorscheme solarized
 color dracula

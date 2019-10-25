@@ -3,8 +3,7 @@ call plug#begin()
 
 "Plug 'pangloss'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'do': 'yarn install' }
 " Tools
 Plug 'ap/vim-css-color'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -14,9 +13,11 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'zeekay/vim-beautify'
+Plug 'mattn/sonictemplate-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'mileszs/ack.vim'
+Plug 'matze/vim-move'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
@@ -71,6 +72,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'mhartington/oceanic-next'
 Plug 'gcmt/taboo.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'flazz/vim-colorschemes'
 Plug 'iCyMind/NeoSolarized'
 Plug 'morhetz/gruvbox'
 call plug#end()
@@ -79,8 +81,10 @@ call plug#end()
 " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'typescript': ['tslint'],
-\   'javascript': ['prettier', 'eslint']
+\   'javascript': ['prettier', 'eslint'],
+\   'css': ['prettier']
 \}
 
 let g:jsx_ext_required = 0
@@ -108,3 +112,54 @@ if has('conceal')
 endif
 
 let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
+" max line length that prettier will wrap on
+" Prettier default: 80
+let g:prettier#config#print_width = 100
+
+" number of spaces per indentation level
+" Prettier default: 2
+let g:prettier#config#tab_width = 2
+"let g:prettier#config#tab_width = 4
+
+" use tabs over spaces
+" Prettier default: false
+let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+" Prettier default: true
+let g:prettier#config#semi = 'true'
+
+" single quotes over double quotes
+" Prettier default: false
+let g:prettier#config#single_quote = 'true'
+
+" print spaces between brackets
+" Prettier default: true
+let g:prettier#config#bracket_spacing = 'false'
+
+" put > on the last line instead of new line
+" Prettier default: false
+let g:prettier#config#jsx_bracket_same_line = 'true'
+
+" avoid|always
+" Prettier default: avoid
+let g:prettier#config#arrow_parens = 'always'
+
+" none|es5|all
+" Prettier default: none
+let g:prettier#config#trailing_comma = 'all'
+
+" flow|babylon|typescript|css|less|scss|json|graphql|markdown
+" Prettier default: babylon
+let g:prettier#config#parser = 'flow'
+
+" cli-override|file-override|prefer-file
+let g:prettier#config#config_precedence = 'prefer-file'
+
+" always|never|preserve
+let g:prettier#config#prose_wrap = 'preserve'
+
+" css|strict|ignore
+let g:prettier#config#html_whitespace_sensitivity = 'css'
+let g:move_key_modifier = 'C'

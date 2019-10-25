@@ -2,10 +2,10 @@
 " Window movement shortcuts
 " move to the window in the direction shown, or create a new window
 
-map <silent> <C-h> :call WinMove('h')<cr>
-map <silent> <C-j> :call WinMove('j')<cr>
-map <silent> <C-k> :call WinMove('k')<cr>
-map <silent> <C-l> :call WinMove('l')<cr>
+"map <silent> <Leader><C-h> :call WinMove('h')<cr>
+"map <silent> <Leader><C-j> :call WinMove('j')<cr>
+"map <silent> <Leader><C-k> :call WinMove('k')<cr>
+"map <silent> <Leader><C-l> :call WinMove('l')<cr>
 
 
 function! WinMove(key)

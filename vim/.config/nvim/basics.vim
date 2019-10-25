@@ -5,9 +5,11 @@
 " Tabs/Spaces
 set expandtab       " insert spaces when hitting TABs
 set shiftround      " round indent to multiple of 'shiftwidth'
-set laststatus=2
 set tabstop=2       " a hard TAB displays as 2 columns
 set shiftwidth=2    " operation >> indents 2 columns; << unindents 2 columns
+"set laststatus=2
+"set tabstop=4       " a hard TAB displays as 2 columns
+"set shiftwidth=4    " operation >> indents 2 columns; << unindents 2 columns
 filetype indent on
 filetype plugin on
 
@@ -19,7 +21,7 @@ set clipboard=unnamedplus
 set autowriteall
 set autowrite
 set nocompatible
-set colorcolumn=80  " highlights text after column [85]
+set colorcolumn=100  " highlights text after column [85]
 set autoindent      " align the new line indent with the previous line
 set hlsearch        " highlight search results
 set cursorline      " highlights current cursor line...
