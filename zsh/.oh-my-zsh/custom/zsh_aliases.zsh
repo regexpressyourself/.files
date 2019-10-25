@@ -114,7 +114,7 @@ alias mu="cd /var/www/html/macupdate.com"
 
 alias emacs="Emacs -nw"
 
-alias of="vim \$(fzf --reverse --border)"
+alias of="vim \$(fzf --reverse --border )"
 alias od="cd \$(dirname \$(fzf --height 40% --reverse --border))"
 alias fzf="fzf --height 40% --reverse --border"
 
@@ -123,7 +123,7 @@ alias tmu="bash ~/scripts/tail_error.sh"
 
 
 # basic utils
-alias rm='rm -v'
+#alias rm='rm -v'
 alias cp='cp -v'
 alias mv='mv -v'
 
@@ -150,3 +150,8 @@ alias sgl="sh ~/scripts/samsgrep-lines.sh"
 alias bc="bc -l"
 
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app &"
+
+alias tstapp=" export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && source /usr/local/opt/chruby/share/chruby/chruby.sh && source /usr/local/opt/chruby/share/chruby/auto.sh && chruby 2.2.10"
+
+alias tfxapp='export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" '
+

@@ -35,8 +35,13 @@ vmap <silent> <expr> p <sid>Repl()
 
 nnoremap <Leader>fr :FZF<CR>
 nnoremap <Leader>fg :GFiles?<CR>
-nnoremap <Leader>/ :Lines<CR>
-nnoremap <Leader>Fl :BLines<CR>
+nnoremap <Leader>fl :Lines<CR>
+nnoremap <Leader>/ :BLines<CR>
+
+nnoremap <Leader>rg :Rg<CR>
+
+nnoremap <Leader>: :Commands<CR>
+
 noremap <leader>bp :bp<CR>
 noremap <leader>bn :bn<CR>
 noremap <leader>bb :Buffers<CR>
