@@ -1,2 +1,42 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/zookeeprr/dotfiles/x/pictures/wallpapers/wallwithivy.jpg' 
+#feh --no-fehbg --bg-fill '/home/zookeeprr/dotfiles/x/pictures/wallpapers/wallwithivy.jpg'
+
+############### PASTEL
+TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/house.jpg'
+WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/boat.jpg'
+
+
+############### FALL1
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/lotsleaves.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/orangeleaves.jpg'
+
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/loneleafside.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/fallleaves.jpg'
+
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/fallleavesside.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/fallleaves.jpg'
+
+############### BIG NATURE
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/redrocks.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/water.jpg'
+
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/coast.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/desert.jpg'
+
+############### KOREA
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/kim.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/koreaconference.jpg'
+
+############### WOODS
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/chillroad.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/nature.png'
+
+############### WIN
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/win95.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/winxp.jpg'
+
+############### CHICAGO
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/cities/chicago.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/cities/chicago2.jpg'
+
+feh --no-fehbg --bg-fill $WIDEIMG --bg-fill $TALLIMG

@@ -13,9 +13,25 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'zeekay/vim-beautify'
+
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
 
 " Auto Complete
 if has('nvim')
@@ -52,7 +68,8 @@ Plug 'tpope/vim-repeat'
 
 " Syntax
 Plug 'leafgarland/typescript-vim'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'epilande/vim-react-snippets'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -77,7 +94,6 @@ let g:ale_fixers = {
 \   'typescript': ['tslint'],
 \   'javascript': ['prettier', 'eslint']
 \}
-
 let g:jsx_ext_required = 0
 let g:ale_echo_msg_format = '%linter%: %s'
 
@@ -107,3 +123,4 @@ let g:strip_whitespace_confirm=0
 let g:easy_align_delimiters = {
 \ '/': { 'pattern': '//\+', 'delimiter_align': 'l', 'ignore_groups': ['!Comment'] }
 \ }
+
