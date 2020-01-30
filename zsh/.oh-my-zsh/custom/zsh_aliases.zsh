@@ -151,7 +151,8 @@ alias bc="bc -l"
 
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app &"
 
-alias tstapp=" export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && source /usr/local/opt/chruby/share/chruby/chruby.sh && source /usr/local/opt/chruby/share/chruby/auto.sh && chruby 2.2.10"
+alias tstapp="export NVM_DIR="$HOME/.nvm"  && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  && [ -s "$NVM_DIR/bash_completion" ] && \. '$NVM_DIR/bash_completion'  && source /usr/local/opt/nvm/nvm.sh && nvm use 6.9.1 && export WORKON_HOME=/Users/topsteptrader/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && source /usr/local/opt/chruby/share/chruby/chruby.sh && source /usr/local/opt/chruby/share/chruby/auto.sh && chruby 2.2.10"
+#export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh && nvm use 6.9.1 && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && source /usr/local/opt/chruby/share/chruby/chruby.sh && source /usr/local/opt/chruby/share/chruby/auto.sh && chruby 2.2.10"
 
 alias tfxapp='export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" '
 

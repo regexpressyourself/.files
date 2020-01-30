@@ -1,5 +1,7 @@
 
 let mapleader = "\<Space>" "leader to space
+
+noremap <Leader>e :Fixmyjs<CR>
 "space-w saves
 nnoremap <Leader>w :w<CR>
 " leader y/p to copy to clipboard

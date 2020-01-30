@@ -2,6 +2,7 @@
 call plug#begin()
 "Plug 'skywind3000/vim-keysound'
 "Plug 'pangloss'
+Plug 'ruanyl/vim-fixmyjs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install' }
 " Tools
@@ -58,6 +59,7 @@ Plug 'tpope/vim-repeat'
 
 " Syntax
 Plug 'leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'w0rp/ale'
 Plug 'epilande/vim-react-snippets'
@@ -119,8 +121,6 @@ let g:prettier#config#print_width = 100
 
 " number of spaces per indentation level
 " Prettier default: 2
-let g:prettier#config#tab_width = 2
-"let g:prettier#config#tab_width = 4
 
 " use tabs over spaces
 " Prettier default: false
@@ -163,3 +163,4 @@ let g:prettier#config#prose_wrap = 'preserve'
 " css|strict|ignore
 let g:prettier#config#html_whitespace_sensitivity = 'css'
 let g:move_key_modifier = 'C'
+

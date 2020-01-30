@@ -5,11 +5,7 @@
 " Tabs/Spaces
 set expandtab       " insert spaces when hitting TABs
 set shiftround      " round indent to multiple of 'shiftwidth'
-set tabstop=2       " a hard TAB displays as 2 columns
-set shiftwidth=2    " operation >> indents 2 columns; << unindents 2 columns
 "set laststatus=2
-"set tabstop=4       " a hard TAB displays as 2 columns
-"set shiftwidth=4    " operation >> indents 2 columns; << unindents 2 columns
 filetype indent on
 filetype plugin on
 
