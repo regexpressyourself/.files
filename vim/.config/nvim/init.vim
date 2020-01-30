@@ -5,4 +5,4 @@ source $HOME/.config/nvim/remaps.vim
 source $HOME/.config/nvim/languages.vim
 source $HOME/.config/nvim/colors.vim
 source $HOME/.config/nvim/gui.vim
-
+source $HOME/.config/nvim/spaces.vim
