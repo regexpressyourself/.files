@@ -83,55 +83,10 @@ if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
   alias vim='nvr'
 fi
 
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-
-#export GOPATH=$HOME/golang
-#export GOROOT=/usr/local/opt/go/libexec
-#export PATH=$PATH:$GOPATH/bin
-#export PATH=$PATH:$GOROOT/bin
-#echo "              _"
-#echo "             | |"
-#echo "             | |===( )   //////"
-#echo "             |_|   |||  | o o|"
-#echo "                    ||| ( c  )                  ____"
-#echo "                     ||| \\= /                  ||   \\_"
-#echo "                      ||||||                   ||     |"
-#echo "                      ||||||                ...||__/|-'"
-#echo "                      ||||||             __|________|__"
-#echo "                        |||             |______________|"
-#echo "                        |||             || ||      || ||"
-#echo "                        |||             || ||      || ||"
-#echo "------------------------|||-------------||-||------||-||-------"
-#echo "                        |__>            || ||      || ||"
-
-
-#echo "   _______________                        |*\\_/*|________"
-#echo "  |  ___________  |     .-.     .-.      ||_/-\\_|______  |"
-#echo "  | |           | |    .****. .****.     | |           | |"
-#echo "  | |   0   0   | |    .*****.*****.     | |   0   0   | |"
-#echo "  | |     -     | |     .*********.      | |     -     | |"
-#echo "  | |   \\___/   | |      .*******.       | |   \\___/   | |"
-#echo "  | |___     ___| |       .*****.        | |___________| |"
-#echo "  |_____|\\_/|_____|        .***.         |_______________|"
-#echo "    _|__|/ \\|_|_.............*.............._|________|_"
-#echo "   / ********** \\                          / ********** \\"
-#echo " /  ************  \\                      /  ************  \\"
-#echo "--------------------                    --------------------"
-#echo ""
-#echo "------------------------------------------------------------"
-sh /Users/topsteptrader/scripts/random-quote.sh
-#echo "------------------------------------------------------------"
-
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-#export WORKON_HOME=$HOME/.virtualenvs
-#source /usr/local/bin/virtualenvwrapper.sh
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
 
 export PATH=~/.npm-global/bin:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -141,18 +96,30 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 
 function countdown(){
-   date1=$((`date +%s` + $1)); 
-   while [ "$date1" -ge `date +%s` ]; do 
+   date1=$((`date +%s` + $1));
+   while [ "$date1" -ge `date +%s` ]; do
      echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
      sleep 0.1
    done
 }
 function stopwatch(){
-  date1=`date +%s`; 
-   while true; do 
-    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
+  date1=`date +%s`;
+   while true; do
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
     sleep 0.1
    done
 }
 
-source /Users/topsteptrader/Library/Preferences/org.dystroy.broot/launcher/bash/br
+ source ~/.profile
+
+quote="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n- IBM Manual"
+FLIP=$(($(($RANDOM%10))%2))
+if [ $FLIP -eq 1 ]
+then
+#cowsay -f tux ${arr[$rand]}
+echo ${quote} | cowsay -f tux
+else
+#cowsay ${arr[$rand]}
+echo ${quote} | cowsay
+fi
+
