@@ -2,7 +2,6 @@
 call plug#begin()
 "Plug 'skywind3000/vim-keysound'
 "Plug 'pangloss'
-Plug 'ruanyl/vim-fixmyjs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install' }
 " Tools
@@ -11,7 +10,6 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
-Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'zeekay/vim-beautify'
 Plug 'mattn/sonictemplate-vim'
@@ -23,27 +21,32 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" Auto Complete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plug 'Shougo/neco-syntax'
-Plug 'wokalski/autocomplete-flow'
-Plug 'zchee/deoplete-jedi'
-Plug 'kristijanhusak/deoplete-phpactor'
-Plug 'zchee/deoplete-zsh'
-Plug 'wellle/tmux-complete.vim'
+" AutoComplete
+Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neosnippet.vim'
-"Plug 'Shougo/neosnippet-snippets'
-let g:deoplete#enable_at_startup = 1
-let g:neosnippet#enable_snipmate_compatibility = 1
-Plug 'honza/vim-snippets'
-let g:neosnippet#snippets_directory='~/.config/nvim/plugged/vim-snippets/snippets'
+Plug 'fgrsnau/ncm2-aspell'
+Plug 'fgrsnau/ncm2-otherbuf'
+Plug 'filipekiss/ncm2-look.vim'
+Plug 'loonies/ncm2-ledger'
+Plug 'mhartington/nvim-typescript'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-cssomni'
+Plug 'ncm2/ncm2-github'
+Plug 'ncm2/ncm2-gtags'
+Plug 'ncm2/ncm2-html-subscope'
+Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-markdown-subscope'
+Plug 'ncm2/ncm2-neoinclude'
+Plug 'ncm2/ncm2-neosnippet'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-syntax'
+Plug 'ncm2/ncm2-tagprefix'
+Plug 'ncm2/ncm2-tern'
+Plug 'ncm2/ncm2-tmux'
+Plug 'roxma/nvim-yarp'
+Plug 'wellle/tmux-complete.vim'
+Plug 'yuki-ycino/ncm2-dictionary'
 
 " Helpers
 Plug 'yuttie/comfortable-motion.vim'
@@ -93,21 +96,6 @@ let g:jsx_ext_required = 0
 let g:ale_echo_msg_format = '%linter%: %s'
 
 
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
- "\ pumvisible() ? "\<C-n>" :
- "\ neosnippet#expandable_or_jumpable() ?
- "\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
 " For conceal markers.
 if has('conceal')
   set conceallevel=0 concealcursor=niv
@@ -115,52 +103,22 @@ endif
 
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
-" max line length that prettier will wrap on
-" Prettier default: 80
-let g:prettier#config#print_width = 100
-
-" number of spaces per indentation level
-" Prettier default: 2
-
-" use tabs over spaces
-" Prettier default: false
-let g:prettier#config#use_tabs = 'false'
-
-" print semicolons
-" Prettier default: true
-let g:prettier#config#semi = 'true'
-
-" single quotes over double quotes
-" Prettier default: false
-let g:prettier#config#single_quote = 'true'
-
-" print spaces between brackets
-" Prettier default: true
-let g:prettier#config#bracket_spacing = 'false'
-
-" put > on the last line instead of new line
-" Prettier default: false
-let g:prettier#config#jsx_bracket_same_line = 'true'
-
-" avoid|always
-" Prettier default: avoid
-let g:prettier#config#arrow_parens = 'always'
-
-" none|es5|all
-" Prettier default: none
-let g:prettier#config#trailing_comma = 'all'
-
-" flow|babylon|typescript|css|less|scss|json|graphql|markdown
-" Prettier default: babylon
-let g:prettier#config#parser = 'flow'
-
-" cli-override|file-override|prefer-file
-let g:prettier#config#config_precedence = 'prefer-file'
-
-" always|never|preserve
-let g:prettier#config#prose_wrap = 'preserve'
-
-" css|strict|ignore
-let g:prettier#config#html_whitespace_sensitivity = 'css'
 let g:move_key_modifier = 'C'
 
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+augroup NCM2
+  autocmd!
+  " enable ncm2 for all buffers
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+  " :help Ncm2PopupOpen for more information
+  set completeopt=noinsert,menuone,noselect
+  " When the <Enter> key is pressed while the popup menu is visible, it only
+  " hides the menu. Use this mapping to close the menu and also start a new line.
+  "inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+augroup END
