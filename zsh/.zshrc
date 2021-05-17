@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorized)
+plugins=(git fzf-tab)
 
 # User configuration
 
@@ -93,6 +93,8 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:/Users/sammessina/.deno/bin"
 
 
 function countdown(){
@@ -110,8 +112,6 @@ function stopwatch(){
    done
 }
 
- source ~/.profile
-
 quote="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n- IBM Manual"
 FLIP=$(($(($RANDOM%10))%2))
 if [ $FLIP -eq 1 ]
@@ -122,4 +122,13 @@ else
 #cowsay ${arr[$rand]}
 echo ${quote} | cowsay
 fi
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+export FZF_TMUX=1 # open in pop-up using unreleased tmux version
+export FZF_TMUX_OPTS="-p -w 90% -h 60%"
 

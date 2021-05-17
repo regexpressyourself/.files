@@ -17,7 +17,6 @@ set clipboard=unnamedplus
 set autowriteall
 set autowrite
 set nocompatible
-set colorcolumn=100  " highlights text after column [85]
 set autoindent      " align the new line indent with the previous line
 set hlsearch        " highlight search results
 set cursorline      " highlights current cursor line...
@@ -41,3 +40,6 @@ set ttimeoutlen=50
 au FocusLost * silent! wa  " save file when alt-tabbing
 
 set noshowmatch
+
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'

@@ -1,11 +1,12 @@
 [user]
-	name = Sam
-	email = samuel.messina@gmail.com
+	name = regexpressyourself
+	email = sam@bitovi.com
 [core]
   editor = nvim
   pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/topsteptrader/.gitignore_global
 [alias]
+  pusho = push --set-upstream origin HEAD
   co = checkout
   ci = commit
   st = status
@@ -25,10 +26,19 @@
 [init]
 	templatedir = ~/.git_template
 [commit]
-	template = /Users/topsteptrader/.gittemplate
+	template = ~/.gittemplate
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[credential]
+	helper = store
+[merge]
+	tool = p4mergetool
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false
+[mergetool]
+	keepBackup = false
