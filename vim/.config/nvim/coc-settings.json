@@ -1,0 +1,7 @@
+{
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "javascript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false
+
+}

@@ -156,3 +156,7 @@ alias tstapp="export NVM_DIR="$HOME/.nvm"  && [ -s "$NVM_DIR/nvm.sh" ] && \. "$N
 
 alias tfxapp='export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" '
 
+alias pr=". ~/scripts/pr.sh"
+alias tok=". ~/scripts/tok.sh"
+alias vpn='echo "5mXGVxZcXD" | pbcopy'
+alias eqf="./commotion/node_modules/.bin/eslint --fix --quiet $(git diff --relative --name-only origin/master | xargs)"

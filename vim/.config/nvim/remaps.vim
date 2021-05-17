@@ -1,9 +1,11 @@
 
 let mapleader = "\<Space>" "leader to space
 
-noremap <Leader>e :Fixmyjs<CR>
+noremap <Leader>p :Prettier <CR> :w <CR>
+"noremap <Leader>p :Fixmyjs<CR> :w <CR>
 "space-w saves
 nnoremap <Leader>w :w<CR>
+
 " leader y/p to copy to clipboard
 nmap <Leader>h :Goyo<CR>
 "expand selected region on hitting v

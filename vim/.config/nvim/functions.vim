@@ -23,3 +23,17 @@ endfunction
 
 
 tnoremap <Esc> <C-\><C-n>
+
+
+" Console log from insert mode; Puts focus inside parentheses
+"imap cl console.log();<Esc>==f(a
+" Console log from visual mode on next line, puts visual selection inside parentheses
+"vmap cl yocl<Esc>p
+" Console log from normal mode, inserted on next line with word your on inside parentheses
+"nmap cl yiwocl<Esc>p
+nnoremap <leader>con yiwoconsole.log(<Esc>pa)<Esc>yypk0f(a"<Esc>f)i"<Esc>
+vnoremap <leader>con yoconsole.log(<Esc>pa)<Esc>yypk0f(a"<Esc>f)i"<Esc>
+
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+nnoremap <leader>qf /eslint<CR>nnnwi--quiet --fix <Esc>
