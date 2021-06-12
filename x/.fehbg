@@ -2,8 +2,10 @@
 #feh --no-fehbg --bg-fill '/home/zookeeprr/dotfiles/x/pictures/wallpapers/wallwithivy.jpg'
 
 ############### PASTEL
-TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/house.jpg'
-WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/boat.jpg'
+#TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/house.jpg'
+#WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/boat.jpg'
+TALLIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/colors.png'
+WIDEIMG='/home/zookeeprr/dotfiles/x/pictures/wallpapers/colors.png'
 
 
 ############### FALL1

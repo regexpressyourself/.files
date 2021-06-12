@@ -11,7 +11,7 @@
 
 # Floating Windows
 new_window 1pixel
-for_window [class="Gnome-terminal"] floating enable
+#for_window [class="Gnome-terminal"] floating enable
 for_window [class="feh"] floating enable
 for_window [class="Display"] floating enable
 for_window [class="Display"] border none
@@ -27,9 +27,9 @@ for_window [class="URxvt" ] border none
 for_window [class="Spotify"] border none
 
 # gaps
-gaps inner 5
-gaps outer 0
-smart_gaps on
+#gaps inner 5
+#gaps outer 0
+#smart_gaps on
 
 # 1px Border Windows
 
@@ -51,7 +51,7 @@ font pango:Inconsolata 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
