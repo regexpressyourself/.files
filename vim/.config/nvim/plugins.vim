@@ -1,7 +1,7 @@
 "Plugins-------------------------------------------------------------------
 call plug#begin()
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install' }
+  \ 'do': 'yarn install --force' }
 " Tools
 Plug 'ap/vim-css-color'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -37,23 +37,23 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
 " Syntax
-Plug 'posva/vim-vue'
-Plug 'mustache/vim-mustache-handlebars'
+"Plug 'posva/vim-vue'
+"Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
-Plug 'yuezk/vim-js'
+"Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'junegunn/vim-easy-align'
-Plug 'amadeus/vim-mjml'
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
+"Plug 'junegunn/vim-easy-align'
+"Plug 'amadeus/vim-mjml'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Visual
-Plug 'mhartington/oceanic-next'
-Plug 'gcmt/taboo.vim'
+"Plug 'mhartington/oceanic-next'
+"Plug 'gcmt/taboo.vim'
 Plug 'flazz/vim-colorschemes'
-Plug 'iCyMind/NeoSolarized'
-Plug 'morhetz/gruvbox'
+"Plug 'iCyMind/NeoSolarized'
+"Plug 'morhetz/gruvbox'
 call plug#end()
 
 " For conceal markers.
