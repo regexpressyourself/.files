@@ -1,12 +1,5 @@
-
 " Window movement shortcuts
 " move to the window in the direction shown, or create a new window
-
-map <silent> <C-h> :call WinMove('h')<cr>
-map <silent> <C-j> :call WinMove('j')<cr>
-map <silent> <C-k> :call WinMove('k')<cr>
-map <silent> <C-l> :call WinMove('l')<cr>
-
 
 function! WinMove(key)
   let t:curwin = winnr()
@@ -23,3 +16,12 @@ endfunction
 
 
 tnoremap <Esc> <C-\><C-n>
+
+
+" console.log with leader-con
+nnoremap <leader>con yiwoconsole.log(<Esc>pa)<Esc>yypk0f(a"<Esc>f)i"<Esc>
+vnoremap <leader>con yoconsole.log(<Esc>pa)<Esc>yypk0f(a"<Esc>f)i"<Esc>
+
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+nnoremap <leader>qf /eslint<CR>nnnwi--quiet --fix <Esc>

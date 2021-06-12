@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh installation.
-  export ZSH=/home/zookeeprr/.oh-my-zsh
+# Pat hto your oh-my-zsh installation.
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorized)
+plugins=(git fzf-tab)
 
 # User configuration
 
@@ -83,8 +83,54 @@ if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
   alias vim='nvr'
 fi
 
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+
+export PATH=~/.npm-global/bin:$PATH
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:/Users/sammessina/.deno/bin"
+
+
+function countdown(){
+   date1=$((`date +%s` + $1));
+   while [ "$date1" -ge `date +%s` ]; do
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
+}
+function stopwatch(){
+  date1=`date +%s`;
+   while true; do
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+    sleep 0.1
+   done
+}
+
+quote1="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n- IBM Manual"
+quote2="The features must creep"
+FLIP=$(($(($RANDOM%10))%2))
+if [ $FLIP -eq 1 ]
+then
+#cowsay -f tux ${arr[$rand]}
+echo ${quote1} | cowsay -f tux
+else
+#cowsay ${arr[$rand]}
+echo ${quote1} | cowsay
+fi
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+export FZF_TMUX=1 # open in pop-up using unreleased tmux version
+export FZF_TMUX_OPTS="-p -w 90% -h 60%"
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,24 +1,33 @@
 "Plugins-------------------------------------------------------------------
 call plug#begin()
-"Plug 'skywind3000/vim-keysound'
-"Plug 'pangloss'
-
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --force' }
 " Tools
+Plug 'ap/vim-css-color'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
-" Auto Complete
-Plug 'roxma/nvim-completion-manager'
-Plug 'epilande/vim-react-snippets'
 Plug 'scrooloose/nerdcommenter'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'maksimr/vim-jsbeautify'
-Plug 'Chiel92/vim-autoformat'
+Plug 'matze/vim-move'
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" AutoComplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'ruanyl/vim-fixmyjs'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
+Plug 'wellle/tmux-complete.vim'
 
 " Helpers
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -28,29 +37,24 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
 " Syntax
-Plug 'leafgarland/typescript-vim'
-Plug 'w0rp/ale'
-Plug 'epilande/vim-react-snippets'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'gabrielelana/vim-markdown'
-Plug 'junegunn/vim-easy-align'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Visual
-Plug 'mhinz/vim-startify'
-Plug 'mhartington/oceanic-next'
-Plug 'gcmt/taboo.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'iCyMind/NeoSolarized'
-Plug 'morhetz/gruvbox'
+Plug 'flazz/vim-colorschemes'
 call plug#end()
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" For conceal markers.
+if has('conceal')
+  set conceallevel=0 concealcursor=niv
+endif
 
-let g:ale_fixers = {
-\   'typescript': ['tslint'],
-\}
+let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
+let g:move_key_modifier = 'C'
 
-let g:jsx_ext_required = 0
-"let g:keysound_enable = 1
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+

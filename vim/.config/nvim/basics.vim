@@ -1,25 +1,20 @@
 "   SAM MESSINA .VIMRC
 
-"autocmd BufWritePre * :%s/\s\+$//e "kills trailing whitespace on :w
-
 " Tabs/Spaces
-set tabstop=2       " a hard TAB displays as 2 columns
 set expandtab       " insert spaces when hitting TABs
-set shiftwidth=2    " operation >> indents 4 columns; << unindents 4 columns
 set shiftround      " round indent to multiple of 'shiftwidth'
-set laststatus=2
+"set laststatus=2
 filetype indent on
 filetype plugin on
 
 " Basics
 filetype on
 syntax enable
-syntax on 
+syntax on
 set clipboard=unnamedplus
 set autowriteall
 set autowrite
 set nocompatible
-set colorcolumn=80  " highlights text after column [85]
 set autoindent      " align the new line indent with the previous line
 set hlsearch        " highlight search results
 set cursorline      " highlights current cursor line...
@@ -39,7 +34,10 @@ set wildmenu        " command line auto-completion
 set wildmode=list:longest " complimentary with above
 set visualbell      " baby got beep
 set ttimeoutlen=50
-set foldmethod=indent
+"set foldmethod=indent
 au FocusLost * silent! wa  " save file when alt-tabbing
 
 set noshowmatch
+
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'

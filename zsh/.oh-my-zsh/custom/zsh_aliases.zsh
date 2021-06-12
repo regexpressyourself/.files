@@ -70,12 +70,11 @@ alias tls="tmux ls"
 alias td="tmux detach"
 alias tatt="tmux attach-session -t "
 function new-tmux-from-dir-name {
-tmux new-session -As `basename $PWD` 
+tmux new-session -As `basename $PWD`
 }
 alias tnew="new-tmux-from-dir-name"
 
 alias dir='dir --color'
-alias ls='ls --color' 
 
 
 
@@ -115,17 +114,16 @@ alias mu="cd /var/www/html/macupdate.com"
 
 alias emacs="Emacs -nw"
 
-alias of="vim \$(fzf --reverse --border)"
+alias of="vim \$(fzf --reverse --border )"
 alias od="cd \$(dirname \$(fzf --height 40% --reverse --border))"
 alias fzf="fzf --height 40% --reverse --border"
 
 alias tmu="bash ~/scripts/tail_error.sh"
-eval $( dircolors -b $HOME/.dir_colors ) 
 
 
 
 # basic utils
-alias rm='rm -v'
+#alias rm='rm -v'
 alias cp='cp -v'
 alias mv='mv -v'
 
@@ -144,4 +142,21 @@ alias m="make"
 
 alias open407="bash ~/scripts/show-server.sh && bash ~/scripts/show-client.sh"
 
+alias li="lorem-ipsum 1 paragraphs --copy"
 
+alias sg="sh ~/scripts/samsgrep.sh"
+alias sgl="sh ~/scripts/samsgrep-lines.sh"
+
+alias bc="bc -l"
+
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app &"
+
+alias tstapp="export NVM_DIR="$HOME/.nvm"  && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  && [ -s "$NVM_DIR/bash_completion" ] && \. '$NVM_DIR/bash_completion'  && source /usr/local/opt/nvm/nvm.sh && nvm use 6.9.1 && export WORKON_HOME=/Users/topsteptrader/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && source /usr/local/opt/chruby/share/chruby/chruby.sh && source /usr/local/opt/chruby/share/chruby/auto.sh && chruby 2.2.10"
+#export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh && nvm use 6.9.1 && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && source /usr/local/opt/chruby/share/chruby/chruby.sh && source /usr/local/opt/chruby/share/chruby/auto.sh && chruby 2.2.10"
+
+alias tfxapp='export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 && export WORKON_HOME=$HOME/.virtualenvs && source /usr/local/bin/virtualenvwrapper.sh && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" '
+
+alias pr=". ~/scripts/pr.sh"
+alias tok=". ~/scripts/tok.sh"
+alias vpn='echo "5mXGVxZcXD" | pbcopy'
+alias eqf="./commotion/node_modules/.bin/eslint --fix --quiet $(git diff --relative --name-only origin/master | xargs)"
