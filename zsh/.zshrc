@@ -112,15 +112,16 @@ function stopwatch(){
    done
 }
 
-quote="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n- IBM Manual"
+quote1="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n- IBM Manual"
+quote2="The features must creep"
 FLIP=$(($(($RANDOM%10))%2))
 if [ $FLIP -eq 1 ]
 then
 #cowsay -f tux ${arr[$rand]}
-echo ${quote} | cowsay -f tux
+echo ${quote1} | cowsay -f tux
 else
 #cowsay ${arr[$rand]}
-echo ${quote} | cowsay
+echo ${quote1} | cowsay
 fi
 
   export NVM_DIR="$HOME/.nvm"
