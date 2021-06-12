@@ -93,19 +93,19 @@ set statusline=
 set statusline+=%{ModeColors(mode())}
 
 " Mode
-set statusline+=%#powerline#%#fgc#%{ModeName(mode())}%#powerline#
+set statusline+=%#powerline#%#fgc#%{ModeName(mode())}%#powerline#
 set statusline+=\
 
 " Filename
-set statusline+=%#powerline_b#%#fgc_b#%.20f%#powerline_b#
+set statusline+=%#powerline_b#%#fgc_b#%.20f%#powerline_b#
 set statusline+=\
 
 " Right Side
 set statusline+=%=
 
 " Modified
-set statusline+=%#modified_powerline_b#%#modified_fgc#%{Modified(&modified)}%#modified_powerline_b#
+set statusline+=%#modified_powerline_b#%#modified_fgc#%{Modified(&modified)}%#modified_powerline_b#
 set statusline+=\
 
 " Number of buffers
-set statusline+=%#powerline#%#fgc#%{BufNum()}%#powerline#
+set statusline+=%#powerline#%#fgc#%{BufNum()}%#powerline#

@@ -1,7 +1,5 @@
 "   SAM MESSINA .VIMRC
 
-"autocmd BufWritePre * :%s/\s\+$//e "kills trailing whitespace on :w
-
 " Tabs/Spaces
 set expandtab       " insert spaces when hitting TABs
 set shiftround      " round indent to multiple of 'shiftwidth'
