@@ -160,3 +160,4 @@ alias pr=". ~/scripts/pr.sh"
 alias tok=". ~/scripts/tok.sh"
 alias vpn='echo "5mXGVxZcXD" | pbcopy'
 alias eqf="./commotion/node_modules/.bin/eslint --fix --quiet $(git diff --relative --name-only origin/master | xargs)"
+alias winhome="cd /mnt/c/Users/zookeeprr/Desktop/"

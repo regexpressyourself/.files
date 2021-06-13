@@ -4,6 +4,7 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --force' }
 " Tools
 Plug 'ap/vim-css-color'
+Plug 'vimwiki/vimwiki'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -58,3 +59,7 @@ let g:move_key_modifier = 'C'
 set completeopt=noinsert,menuone,noselect
 
 
+
+
+let g:vimwiki_list = [{'path': '~/my_site/',
+                       \ 'syntax': 'markdown', 'ext': '.md'}]

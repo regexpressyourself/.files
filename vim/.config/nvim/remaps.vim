@@ -1,7 +1,10 @@
 
 let mapleader = "\<Space>" "leader to space
 
-noremap <Leader>p :Prettier <CR> :w <CR>
+"let mapleader = ","
+
+"noremap <Leader>p :Prettier<CR>
+":w <CR>
 "noremap <Leader>p :Fixmyjs<CR> :w <CR>
 "space-w saves
 nnoremap <Leader>w :w<CR>
@@ -14,8 +17,8 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 " go to end of paste
 vnoremap <silent> y y`]
-vnoremap <silent> p p`]
-nnoremap <silent> p p`]
+"vnoremap <silent> p p`]
+"nnoremap <silent> p p`]
 nnoremap <CR> G
 nnoremap <BS> gg
 nnoremap H ^
@@ -34,7 +37,7 @@ inoremap <leader>tt <Esc>:tabnew<CR>
 nnoremap <leader>= gg=Gg;<CR>
 nnoremap <leader>y ggyGg;<CR>
 
-vmap <silent> <expr> p <sid>Repl()
+"vmap <silent> <expr> p <sid>Repl()
 
 
 nnoremap <Leader>fr :FZF<CR>

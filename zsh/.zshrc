@@ -1,4 +1,5 @@
 # Pat hto your oh-my-zsh installation.
+export PATH="$PATH:/usr/games"
   export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -92,9 +93,6 @@ export PATH=~/.npm-global/bin:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="$PATH:$(yarn global bin)"
-export PATH="$PATH:/Users/sammessina/.deno/bin"
 
 
 function countdown(){
@@ -112,6 +110,19 @@ function stopwatch(){
    done
 }
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+export FZF_TMUX=1 # open in pop-up using unreleased tmux version
+export FZF_TMUX_OPTS="-p -w 90% -h 60%"
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 quote1="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n- IBM Manual"
 quote2="The features must creep"
 FLIP=$(($(($RANDOM%10))%2))
@@ -124,13 +135,10 @@ else
 echo ${quote1} | cowsay
 fi
 
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 
-export FZF_TMUX=1 # open in pop-up using unreleased tmux version
-export FZF_TMUX_OPTS="-p -w 90% -h 60%"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$PATH:$(yarn global bin)"
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$PATH:/mnt/c/Program Files/Mozilla Firefox"
+alias ff="firefox.exe"
+
