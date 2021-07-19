@@ -1,6 +1,6 @@
 [user]
-	name = regexpressyourself
-	email = sam@bitovi.com
+	name = Sam Messina
+	email = sam.messina@himaxwell.com
 [core]
   editor = nvim
   pager = diff-so-fancy | less --tabs=4 -RFX
