@@ -1,0 +1,30 @@
+alt - e : yabai -m space --layout bsp
+alt - s : yabai -m space --layout stack
+
+alt - down : yabai -m window --focus stack.next || yabai -m window --focus south
+alt - up : yabai -m window --focus stack.prev || yabai -m window --focus north
+ctrl + alt - left : yabai -m window --focus west
+ctrl + alt - right : yabai -m window --focus east
+
+alt + shift - 1 : yabai -m window --space 1
+alt + shift - 2 : yabai -m window --space 2
+alt + shift - 3 : yabai -m window --space 3
+alt + shift - 4 : yabai -m window --space 4
+alt + shift - 5 : yabai -m window --space 5
+alt + shift - 6 : yabai -m window --space 6
+
+alt + shift - k : yabai -m window --swap north
+alt + shift - j : yabai -m window --swap south
+alt + shift - h : yabai -m window --swap west
+alt + shift - l : yabai -m window --swap east
+
+alt - k : yabai -m window --focus north
+alt - j : yabai -m window --focus south
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+alt + shift - r : yabai -m space --rotate 90
+
+
+
+alt - f : yabai -m window --toggle float

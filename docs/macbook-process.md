@@ -8,6 +8,15 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew upgrade
 brew install yarn tmux zsh emacs neovim pandoc ripgrep tree
+
+```
+
+Install yabai: https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
+Install skhd: https://github.com/koekeishiya/skhd
+
+```
+brew services start skhd
+brew services start yabai
 ```
 
 #### Homebrew errors with permissions
