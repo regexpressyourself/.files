@@ -1,4 +1,5 @@
 "Plugins-------------------------------------------------------------------
+"
 call plug#begin()
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --force' }
@@ -63,6 +64,7 @@ let g:move_key_modifier = 'C'
 set completeopt=noinsert,menuone,noselect
 
 
+set rtp+=/opt/homebrew/opt/fzf
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
