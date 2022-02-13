@@ -114,9 +114,10 @@ alias mu="cd /var/www/html/macupdate.com"
 
 alias emacs="Emacs -nw"
 
-alias of="vim \$(fzf --reverse --border )"
+alias of="~/scripts/fzf-script.zsh"
+#vim \$(fzf --reverse --border --height 40%)"
 alias od="cd \$(dirname \$(fzf --height 40% --reverse --border))"
-alias fzf="fzf --height 40% --reverse --border"
+#alias fzf="fzf --height 40% --reverse --border"
 
 alias tmu="bash ~/scripts/tail_error.sh"
 
