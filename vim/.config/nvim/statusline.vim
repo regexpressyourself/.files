@@ -108,4 +108,4 @@ set statusline+=%#modified_powerline_b#%#modified_fgc#%{Modified(&modified)}%#mo
 set statusline+=\
 
 " Number of buffers
-set statusline+=%#powerline#%#fgc#%{BufNum()}%#powerline#
+set statusline+=%#powerline#>%#fgc#%{BufNum()}%#powerline#

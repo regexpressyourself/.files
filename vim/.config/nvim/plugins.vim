@@ -2,13 +2,17 @@
 call plug#begin()
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --force' }
-" Tools
+Plug 'ngmy/vim-rubocop'
+ "Tools
 Plug 'ap/vim-css-color'
+Plug 'amadeus/vim-convert-color-to'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'matze/vim-move'
+Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
@@ -29,6 +33,7 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -58,3 +63,10 @@ let g:move_key_modifier = 'C'
 set completeopt=noinsert,menuone,noselect
 
 
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+au FileType rb let b:prettier_exec_cmd = "prettier-ruby"

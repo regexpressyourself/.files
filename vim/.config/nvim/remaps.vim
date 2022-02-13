@@ -1,13 +1,32 @@
 
 let mapleader = "\<Space>" "leader to space
 
-noremap <Leader>p :Prettier <CR> :w <CR>
-"noremap <Leader>p :Fixmyjs<CR> :w <CR>
+
+command -nargs=+ Run :cexpr system('<args>') | copen
+noremap <leader>p :Prettier <CR>:CocCommand eslint.executeAutofix <CR> ggVG= :w <CR>
+autocmd FileType ruby noremap <leader>p :Run ~/scripts/work/rubofix.sh<CR> ggVG= :w <CR>
+noremap <leader>r :Run ~/scripts/work/rubofix.sh<CR> ggVG= :w <CR>
+
+"noremap <leader>r :! git diff --diff-filter=AM --name-only HEAD | grep \.rb | xargs rubocop -A
+"<CR>
+"noremap <leader>p :Fixmyjs<CR> :w <CR>
+"
+"noremap <leader>p :CocCommand eslint.executeAutofix <CR>
+
+"nnoremap <leader>p :Prettier<CR>
+nnoremap <leader>l :CocCommand eslint.executeAutofix<CR>
+
+nnoremap <leader>cp :let @+ = expand("%")<cr>
+
+
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 "space-w saves
-nnoremap <Leader>w :w<CR>
+nnoremap <leader>w :w<CR>
 
 " leader y/p to copy to clipboard
-nmap <Leader>h :Goyo<CR>
+nmap <leader>h :Goyo<CR>
 "expand selected region on hitting v
 vmap v <Plug>(expand_region_expand)
 "reduce selected region on hitting c-v
@@ -37,14 +56,14 @@ nnoremap <leader>y ggyGg;<CR>
 vmap <silent> <expr> p <sid>Repl()
 
 
-nnoremap <Leader>fr :FZF<CR>
-nnoremap <Leader>fg :GFiles?<CR>
-nnoremap <Leader>fl :Lines<CR>
-nnoremap <Leader>/ :BLines<CR>
+nnoremap <leader>fr :FZF<CR>
+nnoremap <leader>fg :GFiles?<CR>
+nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>/ :BLines<CR>
 
-nnoremap <Leader>rg :Rg<CR>
+nnoremap <leader>rg :Rg<CR>
 
-nnoremap <Leader>: :Commands<CR>
+nnoremap <leader>: :Commands<CR>
 
 noremap <leader>bp :bp<CR>
 noremap <leader>bn :bn<CR>
@@ -122,7 +141,7 @@ autocmd FileType scss noremap <buffer> <leader>bf :call CSSBeautify()<cr>
 
 
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
-nnoremap <Leader>al :Ack! -l<Space>
+nnoremap <leader>a :Ack!<Space>
+nnoremap <leader>al :Ack! -l<Space>
 
-nnoremap <Leader>bc V:!bc -l<cr>
+nnoremap <leader>bc V:!bc -l<cr>

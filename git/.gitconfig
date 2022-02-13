@@ -1,38 +1,64 @@
 [user]
 	name = Sam Messina
 	email = sam.messina@himaxwell.com
+[color "diff"]
+	whitespace = red reverse
+	meta = yellow
+	commit = green
+	frag = magenta
+	old = red
+	new = green
+[color "diff-highlight"]
+	oldNormal = red
+	oldHighlight = red 55
+	newNormal = green
+	newHighlight = green 22
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
 [core]
   editor = nvim
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  ;pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/topsteptrader/.gitignore_global
 [alias]
   pusho = push --set-upstream origin HEAD
   co = checkout
   ci = commit
-  st = status
-  diff = diff -- . ':(exclude)*.min.css' ':(exclude)*.min.css.map' ':(exclude)*.min.js' ':(exclude)*.min.js.map'
+  ;st = status
+	st = status -sb
+	stu = status -s -uno
+	stl = status --long
+  ;diff = diff -- . ':(exclude)*.min.css' ':(exclude)*.min.css.map' ':(exclude)*.min.js' ':(exclude)*.min.js.map'
   br = branch
   hist = log --graph --decorate --pretty=oneline --abbrev-commit
   type = cat-file -t
   dump = cat-file -p
 	ctags = !.git/hooks/ctags
+	resolve = !${EDITOR:=vi} $(git status --porcelain | awk '/^UU / {print $2}' | head -1)
+	pristine = !git fetch && git reset --hard origin/$(git symbolic-ref --short HEAD)
+	resolved = !git add $(git status --porcelain | awk '/^UU / {print $2}' | head -1)
+	rbc = rebase --continue
+	rba = rebase --abort
 [credential "https://github.com"]
   username = regexpressyourself
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+;[color "diff-highlight"]
+  ;oldNormal = red bold
+  ;oldHighlight = red bold 52
+  ;newNormal = green bold
+  ;newHighlight = green bold 22
 [init]
 	templatedir = ~/.git_template
 [commit]
 	template = ~/.gittemplate
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+;[difftool "sourcetree"]
+	;cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	;path =
+;[mergetool "sourcetree"]
+	;cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	;trustExitCode = true
 [credential]
 	helper = store
 [merge]
@@ -42,3 +68,20 @@
 	trustExitCode = false
 [mergetool]
 	keepBackup = false
+[delta]
+	line-numbers = true
+	side-by-side = true
+	file-decoration-style = blue ul ol
+	hunk-header-decoration-style = blue
+[diff]
+	algorithm = patience
+	tool = icdiff
+	renameLimit = 1000
+[difftool]
+	prompt = false
+[difftool "colordiff"]
+# Side by side, full file
+	cmd = colordiff -ydw -W 160 $LOCAL $REMOTE
+[difftool "icdiff"]
+# Side by side, with only the context of the changes, more advanced highlighting
+	cmd = icdiff --head=5000 --highlight --line-numbers -L \"$BASE\" -L \"$REMOTE\" \"$LOCAL\" \"$REMOTE\"
