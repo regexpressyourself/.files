@@ -3,3 +3,4 @@ vim/.config/nvim/.netrwhist
 x/pictures/guitar
 x/.Xresources
 *.DS_Store
+**/*.DS_Store
