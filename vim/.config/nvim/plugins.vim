@@ -1,10 +1,11 @@
 "Plugins-------------------------------------------------------------------
 "
 call plug#begin()
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --force' }
+"" post install (yarn install | npm install) then load plugin only for editing supported files
+"Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'ngmy/vim-rubocop'
  "Tools
+Plug 'vim-autoformat/vim-autoformat'
 Plug 'ap/vim-css-color'
 Plug 'amadeus/vim-convert-color-to'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -44,6 +45,7 @@ Plug 'tpope/vim-repeat'
 
 " Syntax
 Plug 'pangloss/vim-javascript'
+Plug 'pantharshit00/vim-prisma'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ntpeters/vim-better-whitespace'
 

@@ -3,7 +3,7 @@ let mapleader = "\<Space>" "leader to space
 
 
 command -nargs=+ Run :cexpr system('<args>') | copen
-noremap <leader>p :Prettier <CR>:CocCommand eslint.executeAutofix <CR> ggVG= :w <CR>
+noremap <leader>p :Prettier <CR> :w <CR>
 autocmd FileType ruby noremap <leader>p :Run ~/scripts/work/rubofix.sh<CR> ggVG= :w <CR>
 noremap <leader>r :Run ~/scripts/work/rubofix.sh<CR> ggVG= :w <CR>
 
