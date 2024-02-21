@@ -4,7 +4,13 @@ call plug#begin()
 "" post install (yarn install | npm install) then load plugin only for editing supported files
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'ngmy/vim-rubocop'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
  "Tools
+ "
+
+
+Plug 'amadeus/vim-convert-color-to'
+
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'ap/vim-css-color'
 Plug 'amadeus/vim-convert-color-to'
@@ -47,7 +53,7 @@ Plug 'tpope/vim-repeat'
 Plug 'pangloss/vim-javascript'
 Plug 'pantharshit00/vim-prisma'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'ntpeters/vim-better-whitespace'
+"Plug 'ntpeters/vim-better-whitespace'
 
 " Visual
 Plug 'flazz/vim-colorschemes'
@@ -72,5 +78,3 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-
-au FileType rb let b:prettier_exec_cmd = "prettier-ruby"

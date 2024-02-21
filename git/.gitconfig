@@ -51,6 +51,7 @@
   ;newHighlight = green bold 22
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [commit]
 	template = ~/.gittemplate
 ;[difftool "sourcetree"]
@@ -85,3 +86,8 @@
 [difftool "icdiff"]
 # Side by side, with only the context of the changes, more advanced highlighting
 	cmd = icdiff --head=5000 --highlight --line-numbers -L \"$BASE\" -L \"$REMOTE\" \"$LOCAL\" \"$REMOTE\"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

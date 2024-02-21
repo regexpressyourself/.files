@@ -1,5 +1,5 @@
 # Pat hto your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,13 +49,17 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf-tab)
+#plugins=(git fzf-tab)
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+for ((i=1; i<=100; i++))
+do
+  echo
+done
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -88,13 +92,17 @@ if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='/opt/homebrew/bin/rg --files --no-ignore --hidden --follow -g "!{.git,node_modules,**/node_modules,yarn.lock,package-lock.json}/*" 2> /dev/null'
+export FZF_DEFAULT_COMMAND='/opt/homebrew/bin/rg --files --hidden --follow -g "!{.git,node_modules,**/node_modules,yarn.lock,package-lock.json,**/.cache/*}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
 export PATH=~/.npm-global/bin:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+export M2_HOME="/Users/zookeeprr/Downloads/apache-maven-3.8.6"
+export PATH="${M2_HOME}/bin:${PATH}"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$PATH:$(yarn global bin)"
@@ -116,16 +124,26 @@ function stopwatch(){
    done
 }
 
-quote1="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n- IBM Manual"
-quote2="The features must creep"
-FLIP=$(($(($RANDOM%10))%2))
+quote1="All parts should go together without forcing. You must remember that the parts you are reassembling were disassembled by you. Therefore, if you can't get them together again, there must be a reason. \n\nBy all means, do not use a hammer. \n\n\t- IBM Manual"
+
+quote2="The best way out is always through. \n\n– Robert Frost"
+
+quote3="Don't walk behind me; I may not lead. \nDon't walk in front of me; I may not follow. \nJust walk beside me and be my friend.\n\n\t- Albert Camus"
+
+#quote2="The features must creep"
+FLIP=$(($(($RANDOM%10))%3))
 if [ $FLIP -eq 1 ]
 then
-#cowsay -f tux ${arr[$rand]}
 echo ${quote1} | cowsay -f tux
-else
+##cowsay -f tux ${arr[$rand]}
+elif [ $FLIP -eq 0 ]
+then
 #cowsay ${arr[$rand]}
-echo ${quote1} | cowsay
+echo ${quote3} | cowsay -f tux
+elif [ $FLIP -eq 2 ]
+then
+#cowsay ${arr[$rand]}
+echo ${quote2} | cowsay -f tux
 fi
 
 
@@ -136,3 +154,14 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export FZF_TMUX=1 # open in pop-up using unreleased tmux version
 export FZF_TMUX_OPTS="-p -w 90% -h 60%"
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# pnpm
+export PNPM_HOME="/Users/zookeeprr/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

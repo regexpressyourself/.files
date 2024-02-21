@@ -4,8 +4,6 @@ let mapleader = "\<Space>" "leader to space
 
 command -nargs=+ Run :cexpr system('<args>') | copen
 noremap <leader>p :Prettier <CR> :w <CR>
-autocmd FileType ruby noremap <leader>p :Run ~/scripts/work/rubofix.sh<CR> ggVG= :w <CR>
-noremap <leader>r :Run ~/scripts/work/rubofix.sh<CR> ggVG= :w <CR>
 
 "noremap <leader>r :! git diff --diff-filter=AM --name-only HEAD | grep \.rb | xargs rubocop -A
 "<CR>
@@ -16,7 +14,7 @@ noremap <leader>r :Run ~/scripts/work/rubofix.sh<CR> ggVG= :w <CR>
 "nnoremap <leader>p :Prettier<CR>
 nnoremap <leader>l :CocCommand eslint.executeAutofix<CR>
 
-nnoremap <leader>cp :let @+ = expand("%")<cr>
+"nnoremap <leader>cp :let @+ = expand("%")<cr>
 
 
 vmap <leader>f  <Plug>(coc-format-selected)
@@ -26,11 +24,11 @@ nmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <leader>w :w<CR>
 
 " leader y/p to copy to clipboard
-nmap <leader>h :Goyo<CR>
+"nmap <leader>h :Goyo<CR>
 "expand selected region on hitting v
-vmap v <Plug>(expand_region_expand)
+"vmap v <Plug>(expand_region_expand)
 "reduce selected region on hitting c-v
-vmap <C-v> <Plug>(expand_region_shrink)
+"vmap <C-v> <Plug>(expand_region_shrink)
 " go to end of paste
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]

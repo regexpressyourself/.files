@@ -92,7 +92,7 @@ alias tasks="task list && task calendar"
 
 alias pdf="apvlv"
 
-alias emacz="emacsclient -c"
+#alias emacz="emacsclient -c"
 alias idea="~/aur/idea-IC-143.382.35/bin/idea.sh"
 alias kde="~/config/kde.sh"
 alias i3="~/config/i3.sh"
@@ -112,7 +112,7 @@ alias findfile="find . -name "
 
 alias mu="cd /var/www/html/macupdate.com"
 
-alias emacs="Emacs -nw"
+#alias emacs="Emacs -nw"
 
 alias of="~/scripts/fzf-script.zsh"
 #vim \$(fzf --reverse --border --height 40%)"
@@ -161,3 +161,13 @@ alias pr=". ~/scripts/pr.sh"
 alias tok=". ~/scripts/tok.sh"
 alias vpn='echo "5mXGVxZcXD" | pbcopy'
 alias eqf="./commotion/node_modules/.bin/eslint --fix --quiet $(git diff --relative --name-only origin/master | xargs)"
+alias obs='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/obsidian'
+
+
+#alias rg='/opt/homebrew/bin/rg --files --hidden --follow -g "!{.git,node_modules,**/node_modules,yarn.lock,package-lock.json,**/.cache/*}/*" 2> /dev/null'
+#
+alias vg='rg -l --vimgrep "$(pbpaste)" | vim -q /dev/stdin'
+
+alias rgi="~/scripts/rg-grep.sh"
+
+alias dis="~/scripts/displaytoggle.sh"

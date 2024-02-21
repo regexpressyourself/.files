@@ -3,3 +3,4 @@ export EDITOR='nvim'
 
 export PATH=~/.local/bin:$PATH
 export PATH=/bin:$PATH
+. "$HOME/.cargo/env"

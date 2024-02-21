@@ -6,11 +6,26 @@
     "typescript",
     "typescriptreact"
   ],
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.11",
+      "path": "/path/to/jdk-11"
+    },
+    {
+      "name": "JavaSE-11",
+      "path": "/path/to/jdk-11"
+    },
+    {
+      "name": "JavaSE-14",
+      "path": "/path/to/jdk-14",
+      "default": true
+    }
+  ],
   "coc.preferences.formatOnSaveFiletypes": ["ruby"],
   "javascript.suggestionActions.enabled": false,
   "typescript.suggestionActions.enabled": false,
 
-  "solargraph.useBundler":true,
+  "solargraph.useBundler": true,
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
 
@@ -40,8 +55,8 @@
       }
     }
   },
-  "diagnostic-languageserver.filetypes": {
-    "ruby": "rubocop"
+  "languageserver": {
+    "ruby": { "module": "rubocop", "filetypes": ["ruby", "rb"] }
   },
   "diagnostic.checkCurrentLine": true
 }
